@@ -4,168 +4,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description"
-		content="Fastkart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
-	<meta name="keywords"
-		content="admin template, Fastkart admin template, dashboard template, flat admin template, responsive admin template, web app">
-	<meta name="author" content="pixelstrap">
-	<link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" href="assets/images/favicon.png"
-		type="image/x-icon">
-	<title><dec:title default="Dashboard" /></title>
-	
-	<!-- Google font-->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-		rel="stylesheet">
-	
-	<!-- Linear Icon css -->
-	<link rel="stylesheet" href="/teampleate/admin/css/linearicon.css">
-	
-	<!-- fontawesome css -->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/vendors/font-awesome.css">
-	
-	<!-- Themify icon css-->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/vendors/themify.css">
-	
-	<!-- ratio css -->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/ratio.css">
-	
-	<!-- remixicon css -->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/remixicon.css">
-	
-	<!-- Feather icon css-->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/vendors/feather-icon.css">
-	
-	<!-- Plugins css -->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/vendors/scrollbar.css">
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/vendors/animate.css">
-	
-	<!-- Bootstrap css-->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/vendors/bootstrap.css">
-	
-	<!-- vector map css -->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/vector-map.css">
-	
-	<!-- Slick Slider Css -->
-	<link rel="stylesheet" href="/teampleate/admin/css/vendors/slick.css">
-	
-	<!-- App css -->
-	<link rel="stylesheet" type="text/css"
-		href="/teampleate/admin/css/style.css">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<title><dec:title default="Dashboard" /></title>
+
+<!-- Custom fonts for this template-->
+<link rel="stylesheet"
+	href="<c:url value='teamplate/admin/vendor/fontawesome-free/css/all.min.css'/>"
+	type="text/css" media="all">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link rel="stylesheet"
+	href="<c:url value='teamplate/admin/css/sb-admin-2.min.css'/>"
+	type="text/css" media="all">
+
 </head>
 
-<body>
-	<!-- tap on top start -->
-	<div class="tap-top">
-		<span class="lnr lnr-chevron-up"></span>
-	</div>
-	<!-- tap on tap end -->
+<body id="page-top">
 
-	<!-- page-wrapper Start-->
-	<div class="page-wrapper compact-wrapper" id="pageWrapper">
+	<!-- Page Wrapper -->
+	<div id="wrapper">
 
-		<!-- Page Header Start-->
-		<%@ include file="/common/admin/header.jsp"%>
-		<!-- Page Header Ends-->
+		<!-- header -->
+		<%@ include file="/common/admin/menu.jsp"%>
+		<!-- header -->
 
-		<!-- Page Body Start-->
-		<div class="page-body-wrapper">
-			<!-- Page Sidebar Start-->
-			<%@ include file="/common/admin/menu.jsp"%>
-			<!-- Page Sidebar Ends-->
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
 
-			<!-- index body start -->
-			<div class="page-body">
-			
-			
+			<!-- Main Content -->
+			<div id="content">
+
+				<!-- header -->
+				<%@ include file="/common/admin/header.jsp"%>
+				<!-- header -->
+
+				<!-- body -->
 				<dec:body />
-				
-				
-				<!-- footer start-->
-                <%@ include file="/common/admin/footer.jsp"%>
-                <!-- footer End-->
-                
+				<!-- body -->
+
+				<!-- footer -->
+				<%@ include file="/common/admin/footer.jsp"%>
+				<!-- footer -->
+
 			</div>
-			<!-- index body end -->
-			
+			<!-- End of Content Wrapper -->
+
 		</div>
-		<!-- Page Body End -->
-		
-	</div>
-	<!-- page-wrapper End-->
+		<!-- End of Page Wrapper -->
 
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded" href="#page-top"> <i
+			class="fas fa-angle-up"></i>
+		</a>
 
+		<!-- Logout Modal-->
+		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Ready to
+							Leave?</h5>
+						<button class="close" type="button" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">Select "Logout" below if you are
+						ready to end your current session.</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button"
+							data-dismiss="modal">Cancel</button>
+						<a class="btn btn-primary" href="login.html">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<!-- Bootstrap core JavaScript-->
+		<script src="teamplate/admin/vendor/jquery/jquery.min.js"></script>
+		<script
+			src="teamplate/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<!-- Latest JS -->
-	<script src="<c:url value='/teampleate/admin/js/jquery-3.6.0.min.js'/>"></script>
+		<!-- Core plugin JavaScript-->
+		<script
+			src="teamplate/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-	<!-- Bootstrap JS -->
-	<script
-		src="<c:url value='/teampleate/admin/js/bootstrap/bootstrap.bundle.min.js'/>"></script>
+		<!-- Custom scripts for all pages-->
+		<script src="teamplate/admin/js/sb-admin-2.min.js"></script>
 
-	<!-- Feather Icon JS -->
-	<script
-		src="<c:url value='/teampleate/admin/js/icons/feather-icon/feather.min.js'/>"></script>
-	<script
-		src="<c:url value='/teampleate/admin/js/icons/feather-icon/feather-icon.js'/>"></script>
+		<!-- Page level plugins -->
+		<script src="teamplate/admin/vendor/chart.js/Chart.min.js"></script>
 
-	<!-- Scrollbar Simplebar JS -->
-	<script
-		src="<c:url value='/teampleate/admin/js/scrollbar/simplebar.js'/>"></script>
-	<script src="<c:url value='/teampleate/admin/js/scrollbar/custom.js'/>"></script>
-
-	<!-- Sidebar jQuery -->
-	<script src="<c:url value='/teampleate/admin/js/config.js'/>"></script>
-
-	<!-- Tooltip Init JS -->
-	<script src="<c:url value='/teampleate/admin/js/tooltip-init.js'/>"></script>
-
-	<!-- Plugins JS -->
-	<script src="<c:url value='/teampleate/admin/js/sidebar-menu.js'/>"></script>
-	<script
-		src="<c:url value='/teampleate/admin/js/notify/bootstrap-notify.min.js'/>"></script>
-	<script src="<c:url value='/teampleate/admin/js/notify/index.js'/>"></script>
-
-	<!-- ApexChart JS -->
-	<script
-		src="<c:url value='/teampleate/admin/js/chart/apex-chart/apex-chart1.js'/>"></script>
-	<script
-		src="<c:url value='/teampleate/admin/js/chart/apex-chart/moment.min.js'/>"></script>
-	<script
-		src="<c:url value='/teampleate/admin/js/chart/apex-chart/apex-chart.js'/>"></script>
-	<script
-		src="<c:url value='/teampleate/admin/js/chart/apex-chart/stock-prices.js'/>"></script>
-	<script
-		src="<c:url value='/teampleate/admin/js/chart/apex-chart/chart-custom1.js'/>"></script>
-
-	<!-- Slick Slider JS -->
-	<script src="<c:url value='/teampleate/admin/js/slick.min.js'/>"></script>
-	<script src="<c:url value='/teampleate/admin/js/custom-slick.js'/>"></script>
-
-	<!-- Customizer JS -->
-	<script src="<c:url value='/teampleate/admin/js/customizer.js'/>"></script>
-
-	<!-- Ratio JS -->
-	<script src="<c:url value='/teampleate/admin/js/ratio.js'/>"></script>
-
-	<!-- Sidebar Effect -->
-	<script src="<c:url value='/teampleate/admin/js/sidebareffect.js'/>"></script>
-
-	<!-- Theme JS -->
-	<script src="<c:url value='/teampleate/admin/js/script.js'/>"></script>
+		<!-- Page level custom scripts -->
+		<script src="teamplate/admin/js/demo/chart-area-demo.js"></script>
+		<script src="teamplate/admin/js/demo/chart-pie-demo.js"></script>
 </body>
 </html>

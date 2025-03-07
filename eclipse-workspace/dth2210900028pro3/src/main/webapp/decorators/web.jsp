@@ -10,7 +10,7 @@
 	<title><dec:title default="Trang chủ" /></title>
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon"
-		href="/teampleate/web/images/favicon/favicon.png" />
+		href="teampleate/web/images/favicon/favicon.png" />
 	
 	<!-- Google Fonts -->
 	<link
@@ -20,28 +20,24 @@
 	<!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
 	
 	<link rel="stylesheet"
-		href="<c:url value='/teamplate/web/css/vendor/vendor.min.css
+		href="<c:url value='teamplate/web/css/vendor/vendor.min.css
 '/>"
 		type="text/css" media="all">
 	<link rel="stylesheet"
-		href="<c:url value='teampleate/web/css/plugins/plugins.min.css'/>"
+		href="<c:url value='teamplate/web/css/vendor/plugins.min.css'/>"
 		type="text/css" media="all">
 	<link rel="stylesheet"
-		href="<c:url value='teampleate/web/css/style.min.css'/>">
+		href="<c:url value='teamplate/web/css/vendor/style.min.css'/>">
 	<link rel="stylesheet"
-		href="<c:url value='teampleate/web/css/responsive.min.css'/>"
+		href="<c:url value='teamplate/web/css/vendor/responsive.min.css'/>"
 		type="text/css" media="all">
-	<link rel="stylesheet" href="teamplate/web/css/text.css">
 </head>
 
 <body>
 	<div class="main">
-
-<h1 class="theTest">Hường</h1>
 		<!-- header -->
 		<%@ include file="/common/web/header.jsp"%>
 		<!-- header -->
-
 		<!-- body -->
 		<dec:body />
 		<!-- body -->
@@ -50,9 +46,8 @@
 		<%@ include file="/common/web/footer.jsp"%>
 		<!-- footer -->
 	</div>
-	<script src="<c:url value='teampleate/web/js/vendor/vendor.min.js'/>"></script>
-	<script src="<c:url value='teampleate/web/js/plugins/plugins.min.js'/>"></script>
-
-	<script src="<c:url value='teampleate/web/js/main.js'/>"></script>
+	<script src="<c:url value='teamplate/web/css/vendor/vendor.min.js'/>"></script>
+	<script src="<c:url value='teamplate/web/css/vendor/plugins.min.js'/>"></script>
+	<script src="<c:url value='teamplate/web/css/vendor/main.js'/>"></script>
 </body>
 </html>

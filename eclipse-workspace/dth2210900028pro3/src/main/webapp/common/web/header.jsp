@@ -9,7 +9,8 @@
 				<!--Left Start-->
 				<div class="col-lg-4 col-md-12">
 					<div class="text-lg-start text-center">
-						<p class="color-white">Welcome you to Ecolife store!</p>
+						<p class="color-white">Chào mừng bạn đến với cửa hàng Thúy
+							Hường!</p>
 					</div>
 				</div>
 				<!--Left End-->
@@ -17,9 +18,8 @@
 				<div class="col-8 d-lg-block d-none">
 					<div class="header-right-nav hover-style-default">
 						<ul>
-							<li><a href="compare.html"><i
-									class="ion-ios-shuffle-strong"></i>Compare (0)</a></li>
-							<li class="border-color-white"><a href="wishlist.html"><i
+
+							<li class="border-color-white"><a href="#"><i
 									class="ion-android-favorite-outline"></i>Wishlist (0)</a></li>
 						</ul>
 						<!-- Header Top Language Currency -->
@@ -37,31 +37,16 @@
 									<li><a class="dropdown-item" href="login.html">Sign in</a></li>
 								</ul>
 							</div>
-							<!-- Single Wedge Start -->
-							<div class="header-top-curr dropdown">
-								<button
-									class="dropdown-toggle header-action-btn hover-style-default color-white"
-									data-bs-toggle="dropdown">
-									<img class="me-2" src="assets/images/icons/1.jpg" alt="">English<i
-										class="ion-ios-arrow-down"></i>
-								</button>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a class="dropdown-item" href="#"><img
-											src="assets/images/icons/1.jpg" alt="">English</a></li>
-									<li><a class="dropdown-item" href="#"><img
-											src="assets/images/icons/2.jpg" alt="">Français</a></li>
-								</ul>
-							</div>
-							<!-- Single Wedge End -->
+
 							<!-- Single Wedge Start -->
 							<div class="header-top-curr dropdown">
 								<button
 									class="dropdown-toggle header-action-btn hover-style-default color-white pr-0"
 									data-bs-toggle="dropdown">
-									USD $ <i class="ion-ios-arrow-down"></i>
+									VNĐ $ <i class="ion-ios-arrow-down"></i>
 								</button>
 								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a class="dropdown-item" href="#">USD $</a></li>
+									<li><a class="dropdown-item" href="#">VNĐ $</a></li>
 									<li><a class="dropdown-item" href="#">EUR €</a></li>
 								</ul>
 							</div>
@@ -82,8 +67,8 @@
 				<!-- Logo Start -->
 				<div class="col-md-2 col-sm-2">
 					<div class="logo">
-						<a href="index.html"><img src="assets/images/logo/logo.png"
-							alt="" /></a>
+						<a href="/dth2210900028pro3/trang-chu"><img
+							src="teamplate/web/images/logo/logo.png" alt="" /></a>
 					</div>
 				</div>
 				<!-- Logo End -->
@@ -92,58 +77,7 @@
 					<!--Main Navigation Start -->
 					<div class="main-navigation">
 						<ul>
-							<li class="menu-dropdown"><a href="#">Home <i
-									class="ion-ios-arrow-down"></i></a>
-								<ul class="sub-menu">
-									<li class="menu-dropdown position-static"><a href="#">Home
-											Organic <i class="ion-ios-arrow-down"></i>
-									</a>
-										<ul class="sub-menu sub-menu-2">
-											<li><a href="index.html">Organic 1</a></li>
-											<li><a href="index-2.html">Organic 2</a></li>
-											<li><a href="index-3.html">Organic 3</a></li>
-											<li><a href="index-4.html">Organic 4</a></li>
-										</ul></li>
-									<li class="menu-dropdown position-static"><a href="#">Home
-											Cosmetic <i class="ion-ios-arrow-down"></i>
-									</a>
-										<ul class="sub-menu sub-menu-2">
-											<li><a href="index-5.html">Cosmetic 1</a></li>
-											<li><a href="index-6.html">Cosmetic 2</a></li>
-											<li><a href="index-7.html">Cosmetic 3</a></li>
-											<li><a href="index-8.html">Cosmetic 4</a></li>
-										</ul></li>
-									<li class="menu-dropdown position-static"><a href="#">Home
-											Digital <i class="ion-ios-arrow-down"></i>
-									</a>
-										<ul class="sub-menu sub-menu-2">
-											<li><a href="index-9.html">Digital 1</a></li>
-											<li><a href="index-10.html">Digital 2</a></li>
-											<li><a href="index-11.html">Digital 3</a></li>
-											<li><a href="index-12.html">Digital 4</a></li>
-										</ul></li>
-									<li class="menu-dropdown position-static"><a href="#">Home
-											Furniture <i class="ion-ios-arrow-down"></i>
-									</a>
-										<ul class="sub-menu sub-menu-2">
-											<li><a href="index-13.html">Furniture 1</a></li>
-											<li><a href="index-14.html">Furniture 2</a></li>
-											<li><a href="index-15.html">Furniture 3</a></li>
-											<li><a href="index-16.html">Furniture 4</a></li>
-										</ul></li>
-									<li class="menu-dropdown position-static"><a href="#">Home
-											Medical <i class="ion-ios-arrow-down"></i>
-									</a>
-										<ul class="sub-menu sub-menu-2">
-											<li><a href="index-17.html">Medical 1</a></li>
-											<li><a href="index-18.html">Medical 2</a></li>
-											<li><a href="index-19.html">Medical 3</a></li>
-											<li><a href="index-20.html">Medical 4</a></li>
-										</ul></li>
-									<li class="menu-dropdown position-relative"><a
-										href="index-21.html">Single Product</a> <span class="stekar">new</span>
-									</li>
-								</ul></li>
+							<li class="menu-dropdown"><a href="/dth2210900028pro3/trang-chu">Home </a></li>
 							<li class="menu-dropdown"><a href="#">Shop <i
 									class="ion-ios-arrow-down"></i></a>
 								<ul class="mega-menu-wrap">

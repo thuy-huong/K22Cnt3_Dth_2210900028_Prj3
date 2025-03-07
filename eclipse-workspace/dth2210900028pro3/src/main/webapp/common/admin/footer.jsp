@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<!-- footer start-->
-<div class="container-fluid">
-	<footer class="footer">
-		<div class="row">
-			<div class="col-md-12 footer-copyright text-center">
-				<p class="mb-0">Copyright 2022 © Fastkart theme by pixelstrap</p>
-			</div>
-		</div>
-	</footer>
-</div>
-<!-- footer End-->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; DamThuyHuong</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->

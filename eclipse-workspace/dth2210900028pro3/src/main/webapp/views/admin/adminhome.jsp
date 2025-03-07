@@ -7,826 +7,361 @@
 <title><dec:title default="Dashboard" /></title>
 </head>
 <body>
+	<!-- Begin Page Content -->
 	<div class="container-fluid">
-		<div class="row">
-			<!-- chart caard section start -->
-			<div class="col-sm-6 col-xxl-3 col-lg-6">
-				<div class="main-tiles border-5 border-0  card-hover card o-hidden">
-					<div class="custome-1-bg b-r-4 card-body">
-						<div class="media align-items-center static-top-widget">
-							<div class="media-body p-0">
-								<span class="m-0">Total Revenue</span>
-								<h4 class="mb-0 counter">
-									$6659 <span class="badge badge-light-primary grow"> <i
-										data-feather="trending-up"></i>8.5%
-									</span>
-								</h4>
-							</div>
-							<div class="align-self-center text-center">
-								<i class="ri-database-2-line"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<div class="col-sm-6 col-xxl-3 col-lg-6">
-				<div class="main-tiles border-5 card-hover border-0 card o-hidden">
-					<div class="custome-2-bg b-r-4 card-body">
-						<div class="media static-top-widget">
-							<div class="media-body p-0">
-								<span class="m-0">Total Orders</span>
-								<h4 class="mb-0 counter">
-									9856 <span class="badge badge-light-danger grow"> <i
-										data-feather="trending-down"></i>8.5%
-									</span>
-								</h4>
-							</div>
-							<div class="align-self-center text-center">
-								<i class="ri-shopping-bag-3-line"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-6 col-xxl-3 col-lg-6">
-				<div class="main-tiles border-5 card-hover border-0  card o-hidden">
-					<div class="custome-3-bg b-r-4 card-body">
-						<div class="media static-top-widget">
-							<div class="media-body p-0">
-								<span class="m-0">Total Products</span>
-								<h4 class="mb-0 counter">
-									893 <a href="add-new-product.html"
-										class="badge badge-light-secondary grow"> ADD NEW</a>
-								</h4>
-							</div>
-
-							<div class="align-self-center text-center">
-								<i class="ri-chat-3-line"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-6 col-xxl-3 col-lg-6">
-				<div class="main-tiles border-5 card-hover border-0 card o-hidden">
-					<div class="custome-4-bg b-r-4 card-body">
-						<div class="media static-top-widget">
-							<div class="media-body p-0">
-								<span class="m-0">Total Customers</span>
-								<h4 class="mb-0 counter">
-									4.6k <span class="badge badge-light-success grow"> <i
-										data-feather="trending-down"></i>8.5%
-									</span>
-								</h4>
-							</div>
-
-							<div class="align-self-center text-center">
-								<i class="ri-user-add-line"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-12">
-				<div class="card o-hidden card-hover">
-					<div class="card-header border-0 pb-1">
-						<div class="card-header-title p-0">
-							<h4>Category</h4>
-						</div>
-					</div>
-					<div class="card-body p-0">
-						<div class="category-slider no-arrow">
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/vegetable.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Vegetables & Fruit</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/cup.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Beverages</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/meats.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Meats & Seafood</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/breakfast.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Breakfast</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/frozen.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Frozen Foods</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/milk.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Milk & Dairies</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/pet.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Pet Food</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/vegetable.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Vegetables & Fruit</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/cup.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Beverages</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/meats.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Meats & Seafood</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/breakfast.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Breakfast</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/frozen.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Frozen Foods</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/milk.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Milk & Dairies</h6>
-									</a>
-								</div>
-							</div>
-
-							<div>
-								<div class="dashboard-category">
-									<a href="javascript:void(0)" class="category-image"> <img
-										src="assets/svg/pet.svg" class="img-fluid" alt="">
-									</a> <a href="javascript:void(0)" class="category-name">
-										<h6>Pet Food</h6>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- chart card section End -->
-
-
-			<!-- Earning chart star-->
-			<div class="col-xl-6">
-				<div class="card o-hidden card-hover">
-					<div class="card-header border-0 pb-1">
-						<div class="card-header-title">
-							<h4>Revenue Report</h4>
-						</div>
-					</div>
-					<div class="card-body p-0">
-						<div id="report-chart"></div>
-					</div>
-				</div>
-			</div>
-			<!-- Earning chart  end-->
-
-
-			<!-- Best Selling Product Start -->
-			<div class="col-xl-6 col-md-12">
-				<div class="card o-hidden card-hover">
-					<div class="card-header card-header-top card-header--2 px-0 pt-0">
-						<div class="card-header-title">
-							<h4>Best Selling Product</h4>
-						</div>
-
-						<div class="best-selling-box d-sm-flex d-none">
-							<span>Short By:</span>
-							<div class="dropdown">
-								<button class="btn p-0 dropdown-toggle" type="button"
-									id="dropdownMenuButton1" data-bs-toggle="dropdown"
-									data-bs-auto-close="true">Today</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item" href="#">Action</a></li>
-									<li><a class="dropdown-item" href="#">Another action</a></li>
-									<li><a class="dropdown-item" href="#">Something else
-											here</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="card-body p-0">
-						<div>
-							<div class="table-responsive">
-								<table
-									class="best-selling-table w-image
-                                            w-image
-                                            w-image table border-0">
-									<tbody>
-										<tr>
-											<td>
-												<div class="best-product-box">
-													<div class="product-image">
-														<img src="assets/images/product/1.png" class="img-fluid"
-															alt="Product">
-													</div>
-													<div class="product-name">
-														<h5>Aata Buscuit</h5>
-														<h6>26-08-2022</h6>
-													</div>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Price</h6>
-													<h5>$29.00</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Orders</h6>
-													<h5>62</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Stock</h6>
-													<h5>510</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Amount</h6>
-													<h5>$1,798</h5>
-												</div>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<div class="best-product-box">
-													<div class="product-image">
-														<img src="assets/images/product/2.png" class="img-fluid"
-															alt="Product">
-													</div>
-													<div class="product-name">
-														<h5>Aata Buscuit</h5>
-														<h6>26-08-2022</h6>
-													</div>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Price</h6>
-													<h5>$29.00</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Orders</h6>
-													<h5>62</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Stock</h6>
-													<h5>510</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Amount</h6>
-													<h5>$1,798</h5>
-												</div>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<div class="best-product-box">
-													<div class="product-image">
-														<img src="assets/images/product/3.png" class="img-fluid"
-															alt="Product">
-													</div>
-													<div class="product-name">
-														<h5>Aata Buscuit</h5>
-														<h6>26-08-2022</h6>
-													</div>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Price</h6>
-													<h5>$29.00</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Orders</h6>
-													<h5>62</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Stock</h6>
-													<h5>510</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Amount</h6>
-													<h5>$1,798</h5>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Best Selling Product End -->
-
-
-			<!-- Recent orders start-->
-			<div class="col-xl-6">
-				<div class="card o-hidden card-hover">
-					<div class="card-header card-header-top card-header--2 px-0 pt-0">
-						<div class="card-header-title">
-							<h4>Recent Orders</h4>
-						</div>
-
-						<div class="best-selling-box d-sm-flex d-none">
-							<span>Short By:</span>
-							<div class="dropdown">
-								<button class="btn p-0 dropdown-toggle" type="button"
-									id="dropdownMenuButton2" data-bs-toggle="dropdown"
-									data-bs-auto-close="true">Today</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-									<li><a class="dropdown-item" href="#">Action</a></li>
-									<li><a class="dropdown-item" href="#">Another action</a></li>
-									<li><a class="dropdown-item" href="#">Something else
-											here</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="card-body p-0">
-						<div>
-							<div class="table-responsive">
-								<table class="best-selling-table table border-0">
-									<tbody>
-										<tr>
-											<td>
-												<div class="best-product-box">
-													<div class="product-name">
-														<h5>Aata Buscuit</h5>
-														<h6>#64548</h6>
-													</div>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Date Placed</h6>
-													<h5>5/1/22</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Price</h6>
-													<h5>$250.00</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Order Status</h6>
-													<h5>Completed</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Payment</h6>
-													<h5 class="text-danger">Unpaid</h5>
-												</div>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<div class="best-product-box">
-													<div class="product-name">
-														<h5>Aata Buscuit</h5>
-														<h6>26-08-2022</h6>
-													</div>
-												</div>
-											</td>
-
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Date Placed</h6>
-													<h5>5/1/22</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Price</h6>
-													<h5>$250.00</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Order Status</h6>
-													<h5>Completed</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Payment</h6>
-													<h5 class="theme-color">Paid</h5>
-												</div>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<div class="best-product-box">
-													<div class="product-name">
-														<h5>Aata Buscuit</h5>
-														<h6>26-08-2022</h6>
-													</div>
-												</div>
-											</td>
-
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Date Placed</h6>
-													<h5>5/1/22</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Price</h6>
-													<h5>$250.00</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Order Status</h6>
-													<h5>Completed</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Payment</h6>
-													<h5 class="theme-color">Paid</h5>
-												</div>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<div class="best-product-box">
-													<div class="product-name">
-														<h5>Aata Buscuit</h5>
-														<h6>26-08-2022</h6>
-													</div>
-												</div>
-											</td>
-
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Date Placed</h6>
-													<h5>5/1/22</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Price</h6>
-													<h5>$250.00</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Order Status</h6>
-													<h5>Completed</h5>
-												</div>
-											</td>
-
-											<td>
-												<div class="product-detail-box">
-													<h6>Payment</h6>
-													<h5 class="theme-color">Paid</h5>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Recent orders end-->
-
-			<!-- Earning chart star-->
-			<div class="col-xl-6">
-				<div class="card o-hidden card-hover">
-					<div class="card-header border-0 mb-0">
-						<div class="card-header-title">
-							<h4>Earning</h4>
-						</div>
-					</div>
-					<div class="card-body p-0">
-						<div id="bar-chart-earning"></div>
-					</div>
-				</div>
-			</div>
-			<!-- Earning chart end-->
-
-
-			<!-- Transactions start-->
-			<div class="col-xxl-4 col-md-6">
-				<div class="card o-hidden card-hover">
-					<div class="card-header border-0">
-						<div class="card-header-title">
-							<h4>Transactions</h4>
-						</div>
-					</div>
-
-					<div class="card-body pt-0">
-						<div>
-							<div class="table-responsive">
-								<table class="user-table transactions-table table border-0">
-									<tbody>
-										<tr>
-											<td>
-												<div class="transactions-icon">
-													<i class="ri-shield-line"></i>
-												</div>
-												<div class="transactions-name">
-													<h6>Wallets</h6>
-													<p>Starbucks</p>
-												</div>
-											</td>
-
-											<td class="lost">-$74</td>
-										</tr>
-										<tr>
-											<td class="td-color-1">
-												<div class="transactions-icon">
-													<i class="ri-check-line"></i>
-												</div>
-												<div class="transactions-name">
-													<h6>Bank Transfer</h6>
-													<p>Add Money</p>
-												</div>
-											</td>
-
-											<td class="success">+$125</td>
-										</tr>
-										<tr>
-											<td class="td-color-2">
-												<div class="transactions-icon">
-													<i class="ri-exchange-dollar-line"></i>
-												</div>
-												<div class="transactions-name">
-													<h6>Paypal</h6>
-													<p>Add Money</p>
-												</div>
-											</td>
-
-											<td class="lost">-$50</td>
-										</tr>
-										<tr>
-											<td class="td-color-3">
-												<div class="transactions-icon">
-													<i class="ri-bank-card-line"></i>
-												</div>
-												<div class="transactions-name">
-													<h6>Mastercard</h6>
-													<p>Ordered Food</p>
-												</div>
-											</td>
-
-											<td class="lost">-$40</td>
-										</tr>
-										<tr>
-											<td class="td-color-4 pb-0">
-												<div class="transactions-icon">
-													<i class="ri-bar-chart-grouped-line"></i>
-												</div>
-												<div class="transactions-name">
-													<h6>Transfer</h6>
-													<p>Refund</p>
-												</div>
-											</td>
-
-											<td class="success pb-0">+$90</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Transactions end-->
-
-			<!-- visitors chart start-->
-			<div class="col-xxl-4 col-md-6">
-				<div class="h-100">
-					<div class="card o-hidden card-hover">
-						<div class="card-header border-0">
-							<div class="d-flex align-items-center justify-content-between">
-								<div class="card-header-title">
-									<h4>Visitors</h4>
-								</div>
-							</div>
-						</div>
-						<div class="card-body pt-0">
-							<div class="pie-chart">
-								<div id="pie-chart-visitors"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- visitors chart end-->
-
-
-			<!-- To Do List start-->
-			<div class="col-xxl-4 col-md-6">
-				<div class="card o-hidden card-hover">
-					<div class="card-header border-0">
-						<div class="card-header-title">
-							<h4>To Do List</h4>
-						</div>
-					</div>
-
-					<div class="card-body pt-0">
-						<ul class="to-do-list">
-							<li class="to-do-item">
-								<div class="form-check user-checkbox">
-									<input class="checkbox_animated check-it" type="checkbox"
-										value="" id="flexCheckDefault">
-								</div>
-								<div class="to-do-list-name">
-									<strong>Pick up kids from school</strong>
-									<p>8 Hours</p>
-								</div>
-							</li>
-							<li class="to-do-item">
-								<div class="form-check user-checkbox">
-									<input class="checkbox_animated check-it" type="checkbox"
-										value="" id="flexCheckDefault1">
-								</div>
-								<div class="to-do-list-name">
-									<strong>Prepare or presentation.</strong>
-									<p>8 Hours</p>
-								</div>
-							</li>
-							<li class="to-do-item">
-								<div class="form-check user-checkbox">
-									<input class="checkbox_animated check-it" type="checkbox"
-										value="" id="flexCheckDefault2">
-								</div>
-								<div class="to-do-list-name">
-									<strong>Create invoice</strong>
-									<p>8 Hours</p>
-								</div>
-							</li>
-							<li class="to-do-item">
-								<div class="form-check user-checkbox">
-									<input class="checkbox_animated check-it" type="checkbox"
-										value="" id="flexCheckDefault3">
-								</div>
-								<div class="to-do-list-name">
-									<strong>Meeting with Alisa</strong>
-									<p>8 Hours</p>
-								</div>
-							</li>
-
-							<li class="to-do-item">
-								<form class="row g-2">
-									<div class="col-8">
-										<input type="text" class="form-control" id="name"
-											placeholder="Enter Task Name">
-									</div>
-									<div class="col-4">
-										<button type="submit" class="btn btn-primary w-100 h-100">Add
-											task</button>
-									</div>
-								</form>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- To Do List end-->
-
-
+		<!-- Page Heading -->
+		<div class="d-sm-flex align-items-center justify-content-between mb-4">
+			<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+			<a href="#"
+				class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+				class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
 		</div>
+
+		<!-- Content Row -->
+		<div class="row">
+
+			<!-- Earnings (Monthly) Card Example -->
+			<div class="col-xl-3 col-md-6 mb-4">
+				<div class="card border-left-primary shadow h-100 py-2">
+					<div class="card-body">
+						<div class="row no-gutters align-items-center">
+							<div class="col mr-2">
+								<div
+									class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+									Earnings (Monthly)</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+							</div>
+							<div class="col-auto">
+								<i class="fas fa-calendar fa-2x text-gray-300"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Earnings (Monthly) Card Example -->
+			<div class="col-xl-3 col-md-6 mb-4">
+				<div class="card border-left-success shadow h-100 py-2">
+					<div class="card-body">
+						<div class="row no-gutters align-items-center">
+							<div class="col mr-2">
+								<div
+									class="text-xs font-weight-bold text-success text-uppercase mb-1">
+									Earnings (Annual)</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+							</div>
+							<div class="col-auto">
+								<i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Earnings (Monthly) Card Example -->
+			<div class="col-xl-3 col-md-6 mb-4">
+				<div class="card border-left-info shadow h-100 py-2">
+					<div class="card-body">
+						<div class="row no-gutters align-items-center">
+							<div class="col mr-2">
+								<div
+									class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+								</div>
+								<div class="row no-gutters align-items-center">
+									<div class="col-auto">
+										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+									</div>
+									<div class="col">
+										<div class="progress progress-sm mr-2">
+											<div class="progress-bar bg-info" role="progressbar"
+												style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+												aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto">
+								<i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Pending Requests Card Example -->
+			<div class="col-xl-3 col-md-6 mb-4">
+				<div class="card border-left-warning shadow h-100 py-2">
+					<div class="card-body">
+						<div class="row no-gutters align-items-center">
+							<div class="col mr-2">
+								<div
+									class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+									Pending Requests</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+							</div>
+							<div class="col-auto">
+								<i class="fas fa-comments fa-2x text-gray-300"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content Row -->
+
+		<div class="row">
+
+			<!-- Area Chart -->
+			<div class="col-xl-8 col-lg-7">
+				<div class="card shadow mb-4">
+					<!-- Card Header - Dropdown -->
+					<div
+						class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+						<h6 class="m-0 font-weight-bold text-primary">Earnings
+							Overview</h6>
+						<div class="dropdown no-arrow">
+							<a class="dropdown-toggle" href="#" role="button"
+								id="dropdownMenuLink" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"> <i
+								class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+							</a>
+							<div
+								class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+								aria-labelledby="dropdownMenuLink">
+								<div class="dropdown-header">Dropdown Header:</div>
+								<a class="dropdown-item" href="#">Action</a> <a
+									class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</div>
+					</div>
+					<!-- Card Body -->
+					<div class="card-body">
+						<div class="chart-area">
+							<canvas id="myAreaChart"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Pie Chart -->
+			<div class="col-xl-4 col-lg-5">
+				<div class="card shadow mb-4">
+					<!-- Card Header - Dropdown -->
+					<div
+						class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+						<h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+						<div class="dropdown no-arrow">
+							<a class="dropdown-toggle" href="#" role="button"
+								id="dropdownMenuLink" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"> <i
+								class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+							</a>
+							<div
+								class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+								aria-labelledby="dropdownMenuLink">
+								<div class="dropdown-header">Dropdown Header:</div>
+								<a class="dropdown-item" href="#">Action</a> <a
+									class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</div>
+					</div>
+					<!-- Card Body -->
+					<div class="card-body">
+						<div class="chart-pie pt-4 pb-2">
+							<canvas id="myPieChart"></canvas>
+						</div>
+						<div class="mt-4 text-center small">
+							<span class="mr-2"> <i class="fas fa-circle text-primary"></i>
+								Direct
+							</span> <span class="mr-2"> <i class="fas fa-circle text-success"></i>
+								Social
+							</span> <span class="mr-2"> <i class="fas fa-circle text-info"></i>
+								Referral
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content Row -->
+		<div class="row">
+
+			<!-- Content Column -->
+			<div class="col-lg-6 mb-4">
+
+				<!-- Project Card Example -->
+				<div class="card shadow mb-4">
+					<div class="card-header py-3">
+						<h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+					</div>
+					<div class="card-body">
+						<h4 class="small font-weight-bold">
+							Server Migration <span class="float-right">20%</span>
+						</h4>
+						<div class="progress mb-4">
+							<div class="progress-bar bg-danger" role="progressbar"
+								style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+								aria-valuemax="100"></div>
+						</div>
+						<h4 class="small font-weight-bold">
+							Sales Tracking <span class="float-right">40%</span>
+						</h4>
+						<div class="progress mb-4">
+							<div class="progress-bar bg-warning" role="progressbar"
+								style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+								aria-valuemax="100"></div>
+						</div>
+						<h4 class="small font-weight-bold">
+							Customer Database <span class="float-right">60%</span>
+						</h4>
+						<div class="progress mb-4">
+							<div class="progress-bar" role="progressbar" style="width: 60%"
+								aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<h4 class="small font-weight-bold">
+							Payout Details <span class="float-right">80%</span>
+						</h4>
+						<div class="progress mb-4">
+							<div class="progress-bar bg-info" role="progressbar"
+								style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+								aria-valuemax="100"></div>
+						</div>
+						<h4 class="small font-weight-bold">
+							Account Setup <span class="float-right">Complete!</span>
+						</h4>
+						<div class="progress">
+							<div class="progress-bar bg-success" role="progressbar"
+								style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+								aria-valuemax="100"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Color System -->
+				<div class="row">
+					<div class="col-lg-6 mb-4">
+						<div class="card bg-primary text-white shadow">
+							<div class="card-body">
+								Primary
+								<div class="text-white-50 small">#4e73df</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mb-4">
+						<div class="card bg-success text-white shadow">
+							<div class="card-body">
+								Success
+								<div class="text-white-50 small">#1cc88a</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mb-4">
+						<div class="card bg-info text-white shadow">
+							<div class="card-body">
+								Info
+								<div class="text-white-50 small">#36b9cc</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mb-4">
+						<div class="card bg-warning text-white shadow">
+							<div class="card-body">
+								Warning
+								<div class="text-white-50 small">#f6c23e</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mb-4">
+						<div class="card bg-danger text-white shadow">
+							<div class="card-body">
+								Danger
+								<div class="text-white-50 small">#e74a3b</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mb-4">
+						<div class="card bg-secondary text-white shadow">
+							<div class="card-body">
+								Secondary
+								<div class="text-white-50 small">#858796</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mb-4">
+						<div class="card bg-light text-black shadow">
+							<div class="card-body">
+								Light
+								<div class="text-black-50 small">#f8f9fc</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mb-4">
+						<div class="card bg-dark text-white shadow">
+							<div class="card-body">
+								Dark
+								<div class="text-white-50 small">#5a5c69</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-lg-6 mb-4">
+
+				<!-- Illustrations -->
+				<div class="card shadow mb-4">
+					<div class="card-header py-3">
+						<h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+					</div>
+					<div class="card-body">
+						<div class="text-center">
+							<img class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+								style="width: 25rem;" src="img/undraw_posting_photo.svg"
+								alt="...">
+						</div>
+						<p>
+							Add some quality, svg illustrations to your project courtesy of <a
+								target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>,
+							a constantly updated collection of beautiful svg images that you
+							can use completely free and without attribution!
+						</p>
+						<a target="_blank" rel="nofollow" href="https://undraw.co/">Browse
+							Illustrations on unDraw &rarr;</a>
+					</div>
+				</div>
+
+				<!-- Approach -->
+				<div class="card shadow mb-4">
+					<div class="card-header py-3">
+						<h6 class="m-0 font-weight-bold text-primary">Development
+							Approach</h6>
+					</div>
+					<div class="card-body">
+						<p>SB Admin 2 makes extensive use of Bootstrap 4 utility
+							classes in order to reduce CSS bloat and poor page performance.
+							Custom CSS classes are used to create custom components and
+							custom utility classes.</p>
+						<p class="mb-0">Before working with this theme, you should
+							become familiar with the Bootstrap framework, especially the
+							utility classes.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 	</div>
-	<!-- Container-fluid Ends-->
+	<!-- /.container-fluid -->
+
+	</div>
+	<!-- End of Main Content -->
 </body>
 </html>
