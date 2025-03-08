@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class OrderDetailModel {
+public class DthOrderDetailModel {
 	private long id;
 	private long idOrder;
 	private long idProduct;
@@ -37,4 +37,5 @@ public class OrderDetailModel {
 	public void setQuantitySold(int quantitySold) {
 		this.quantitySold = quantitySold;
 	}
+
 }

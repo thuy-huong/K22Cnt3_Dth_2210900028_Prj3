@@ -1,17 +1,17 @@
 package com.dth2210900028pro3.model;
 
-public class CategoryModel extends AbstractModel {
-	private int idCategory;
+public class DthCategoryModel extends AbstractModel{
+	private long idCategory;
 	private String nameCategory;
 	private String image;
 	private Boolean status;
 	private Boolean isDelete;
 
-	public int getIdCategory() {
+	public long getIdCategory() {
 		return idCategory;
 	}
 
-	public void setIdCategory(int idCategory) {
+	public void setIdCategory(long idCategory) {
 		this.idCategory = idCategory;
 	}
 

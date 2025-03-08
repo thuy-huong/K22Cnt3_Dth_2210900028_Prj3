@@ -3,14 +3,14 @@ package com.dth2210900028pro3.mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.dth2210900028pro3.model.ProductModel;
+import com.dth2210900028pro3.model.DthProductModel;
 
-public class ProductMapper implements RowMapper<ProductModel> {
+public class ProductMapper implements RowMapper<DthProductModel> {
 
 	@Override
-	public ProductModel mapRow(ResultSet rs) {
+	public DthProductModel mapRow(ResultSet rs) {
 		try {
-			ProductModel product = new ProductModel();
+			DthProductModel product = new DthProductModel();
 			product.setIdProduct(rs.getLong("idproduct"));
 			product.setNameProduct(rs.getString("nameproduct"));
 			product.setIdCategory(rs.getInt("idcategory"));

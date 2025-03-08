@@ -7,6 +7,16 @@ public class AbstractModel {
 	private Timestamp modifieddate;
 	private String createdBy;
 	private String modifiedBy;
+	private long[] ids;
+	
+	
+	public long[] getIds() {
+		return ids;
+	}
+
+	public void setIds(long[] ids) {
+		this.ids = ids;
+	}
 
 	public Timestamp getCreatedDate() {
 		return createdDate;

@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class UserModel {
+public class DthUserModel extends AbstractModel {
 	private long idUser;
 	private String userName;
 	private String password;

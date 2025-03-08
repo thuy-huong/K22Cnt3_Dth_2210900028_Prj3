@@ -31,10 +31,10 @@
 									Settings <i class="ion-ios-arrow-down"></i>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="my-account.html">My
+									<li><a class="dropdown-item" href="#">My
 											account</a></li>
-									<li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-									<li><a class="dropdown-item" href="login.html">Sign in</a></li>
+									<li><a class="dropdown-item" href="#">Checkout</a></li>
+									<li><a class="dropdown-item" href="#">Sign in</a></li>
 								</ul>
 							</div>
 

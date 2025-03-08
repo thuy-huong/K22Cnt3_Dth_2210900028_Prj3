@@ -3,16 +3,16 @@ package com.dth2210900028pro3.mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.dth2210900028pro3.model.CategoryModel;
+import com.dth2210900028pro3.model.DthCategoryModel;
 
-public class CategoryMapper implements RowMapper<CategoryModel>{
+public class CategoryMapper implements RowMapper<DthCategoryModel>{
 
 	@Override
-	public CategoryModel mapRow(ResultSet resultSet) {
+	public DthCategoryModel mapRow(ResultSet resultSet) {
 		
 		try {
-			CategoryModel cate = new CategoryModel();
-			cate.setIdCategory(resultSet.getInt("idcategory"));
+			DthCategoryModel cate = new DthCategoryModel();
+			cate.setIdCategory(resultSet.getLong("idcategory"));
 			cate.setNameCategory(resultSet.getString("namecategory"));
 			cate.setImage(resultSet.getString("image"));
 			cate.setStatus(resultSet.getBoolean("status"));

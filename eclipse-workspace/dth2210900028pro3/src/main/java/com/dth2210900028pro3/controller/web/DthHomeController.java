@@ -11,28 +11,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dth2210900028pro3.service.ICategoryService;
-import com.dth2210900028pro3.service.IProductService;
+import com.dth2210900028pro3.service.IDthProductService;
 
 @WebServlet(urlPatterns = {"/trang-chu"})
-public class HomeControlller extends HttpServlet {
+public class DthHomeController extends HttpServlet {
 
-	private static final long serialVersionUID = 915549078676220965L;
+	private static final long serialVersionUID = 1L;
 	
 	@Inject
 	private ICategoryService cateService;
 
 	@Inject
-	private IProductService productService;
+	private IDthProductService productService;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	int maCate = 1;
-    	request.setAttribute("products", productService.findByCategoryId(maCate));
-    	request.setAttribute("categories", cateService.findAll());
-
+    	
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
         rd.forward(request, response);
     }
-
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         

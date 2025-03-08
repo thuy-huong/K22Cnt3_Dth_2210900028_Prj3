@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class ProductModel extends AbstractModel {
+public class DthProductModel extends AbstractModel {
 	private long idProduct;
 	private String nameProduct;
 	private int idCategory;
@@ -14,6 +14,7 @@ public class ProductModel extends AbstractModel {
 	private String image;
 	private int status;
 	private Boolean isDelete;
+	
 
 	public long getIdProduct() {
 		return idProduct;
@@ -118,5 +119,6 @@ public class ProductModel extends AbstractModel {
 	public void setIsDelete(Boolean isDelete) {
 		this.isDelete = isDelete;
 	}
+
 
 }
