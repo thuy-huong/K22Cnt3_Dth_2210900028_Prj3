@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class DthRoleModel extends AbstractModel {
+public class DthRoleModel extends AbstractModel<DthRoleModel> {
 	private long idRole;
 	private String name;
 	private Boolean isDelete;

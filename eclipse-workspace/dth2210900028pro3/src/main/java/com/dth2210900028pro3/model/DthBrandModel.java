@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class DthBrandModel extends AbstractModel {
+public class DthBrandModel extends AbstractModel <DthBrandModel>{
 	private long idBrand;
 	private String nameBrand;
 	private String image;

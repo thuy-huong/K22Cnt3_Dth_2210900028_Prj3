@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@include file = "/common/taglib.jsp"%>
 <!-- Header Start -->
 <header class="main-header">
 	<!-- Header Top Start -->
@@ -25,17 +26,32 @@
 						<!-- Header Top Language Currency -->
 						<div class="header-top-set-lan-curr d-flex justify-content-end">
 							<div class="header-bottom-set dropdown">
-								<button
-									class="dropdown-toggle header-action-btn hover-style-default color-white"
-									data-bs-toggle="dropdown">
-									Settings <i class="ion-ios-arrow-down"></i>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">My
-											account</a></li>
-									<li><a class="dropdown-item" href="#">Checkout</a></li>
-									<li><a class="dropdown-item" href="#">Sign in</a></li>
-								</ul>
+								<c:if test="${not empty USERMODEL }">
+									<button
+										class="dropdown-toggle header-action-btn hover-style-default color-white"
+										data-bs-toggle="dropdown">
+										${USERMODEL.fullName } <i class="ion-ios-arrow-down"></i>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">My account</a></li>
+										<li><a class="dropdown-item" href="#">Thanh toán</a></li>
+										<li><a class="dropdown-item"
+											href='<c:url value="/dang-xuat?action=logout"/>'>Đăng xuất</a></li>
+
+									</ul>
+								</c:if>
+								<c:if test="${empty USERMODEL }">
+									<button
+										class="dropdown-toggle header-action-btn hover-style-default color-white"
+										data-bs-toggle="dropdown">
+										Account <i class="ion-ios-arrow-down"></i>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item"
+											href='<c:url value="/dang-nhap?action=login"/>'>Đăng nhập</a></li>
+										<li><a class="dropdown-item" href="#">Đăng ký</a></li>
+									</ul>
+								</c:if>
 							</div>
 
 							<!-- Single Wedge Start -->
@@ -77,7 +93,8 @@
 					<!--Main Navigation Start -->
 					<div class="main-navigation">
 						<ul>
-							<li class="menu-dropdown"><a href="/dth2210900028pro3/trang-chu">Home </a></li>
+							<li class="menu-dropdown"><a
+								href="/dth2210900028pro3/trang-chu">Home </a></li>
 							<li class="menu-dropdown"><a href="#">Shop <i
 									class="ion-ios-arrow-down"></i></a>
 								<ul class="mega-menu-wrap">

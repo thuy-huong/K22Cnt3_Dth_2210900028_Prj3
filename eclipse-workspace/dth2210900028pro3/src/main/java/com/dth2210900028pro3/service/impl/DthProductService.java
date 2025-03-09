@@ -40,4 +40,10 @@ public class DthProductService implements IDthProductService {
 		}
 	}
 
+	@Override
+	public List<DthProductModel> findAll() {
+		
+		return productDao.findAll();
+	}
+
 }

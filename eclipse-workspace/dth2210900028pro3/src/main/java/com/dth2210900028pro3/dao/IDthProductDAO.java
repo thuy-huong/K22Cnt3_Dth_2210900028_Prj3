@@ -10,4 +10,6 @@ public interface IDthProductDAO  extends GenericDAO<DthProductModel>{
 	Long save(DthProductModel productModel);
 	void update(DthProductModel updateProduct);
 	void delete(long id);
+	
+	List<DthProductModel> findAll();
 }

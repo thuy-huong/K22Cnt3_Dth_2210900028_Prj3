@@ -3,6 +3,7 @@ package com.dth2210900028pro3.mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.dth2210900028pro3.model.DthRoleModel;
 import com.dth2210900028pro3.model.DthUserModel;
 
 public class UserMapper implements RowMapper<DthUserModel> {
@@ -25,6 +26,14 @@ public class UserMapper implements RowMapper<DthUserModel> {
 			user.setModifieddate(resultSet.getTimestamp("modifieddate"));
 			user.setCreatedBy(resultSet.getString("createdby"));
 			user.setModifiedBy(resultSet.getString("modifiedby"));
+			try {
+				DthRoleModel role = new DthRoleModel();
+				role.setName(resultSet.getString("name"));
+				user.setRole(role);
+			}catch(Exception e) {
+				System.out.print(e.getMessage());
+			}
+			
 			return user;
 		} catch (SQLException e) {
 

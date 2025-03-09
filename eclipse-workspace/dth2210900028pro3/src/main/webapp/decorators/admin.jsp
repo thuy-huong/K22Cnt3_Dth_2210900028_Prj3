@@ -25,7 +25,10 @@
 <link rel="stylesheet"
 	href="<c:url value='teamplate/admin/css/sb-admin-2.min.css'/>"
 	type="text/css" media="all">
-
+<!-- Custom styles for this page -->
+<link
+	href="teamplate/admin/vendor/datatables/dataTables.bootstrap4.min.css"
+	rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -90,23 +93,28 @@
 			</div>
 		</div>
 
-		<!-- Bootstrap core JavaScript-->
+		<!-- Bootstrap core JavaScript -->
 		<script src="teamplate/admin/vendor/jquery/jquery.min.js"></script>
 		<script
 			src="teamplate/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-		<!-- Core plugin JavaScript-->
+		<!-- Core plugin JavaScript -->
 		<script
 			src="teamplate/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-		<!-- Custom scripts for all pages-->
+		<!-- Custom scripts for all pages -->
 		<script src="teamplate/admin/js/sb-admin-2.min.js"></script>
 
 		<!-- Page level plugins -->
 		<script src="teamplate/admin/vendor/chart.js/Chart.min.js"></script>
+		<script
+			src="teamplate/admin/vendor/datatables/jquery.dataTables.min.js"></script>
+		<script
+			src="teamplate/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 		<!-- Page level custom scripts -->
 		<script src="teamplate/admin/js/demo/chart-area-demo.js"></script>
 		<script src="teamplate/admin/js/demo/chart-pie-demo.js"></script>
+		<script src="teamplate/admin/js/demo/datatables-demo.js"></script>
 </body>
 </html>

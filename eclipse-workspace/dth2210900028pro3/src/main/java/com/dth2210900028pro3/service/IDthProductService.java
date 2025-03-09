@@ -10,4 +10,5 @@ public interface IDthProductService {
 	DthProductModel save(DthProductModel productModel);
 	DthProductModel update(DthProductModel updateProduct);
 	void delete(long[] ids);
+	List<DthProductModel> findAll();
 }

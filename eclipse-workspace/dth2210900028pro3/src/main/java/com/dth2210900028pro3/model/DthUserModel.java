@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class DthUserModel extends AbstractModel {
+public class DthUserModel extends AbstractModel<DthUserModel> {
 	private long idUser;
 	private String userName;
 	private String password;
@@ -11,6 +11,15 @@ public class DthUserModel extends AbstractModel {
 	private int status;
 	private long roleid;
 	private Boolean isDelete;
+	private DthRoleModel role = new DthRoleModel();
+	
+	public DthRoleModel getRole() {
+		return role;
+	}
+
+	public void setRole(DthRoleModel role) {
+		this.role = role;
+	}
 
 	public long getIdUser() {
 		return idUser;

@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class DthCommentModel extends AbstractModel {
+public class DthCommentModel extends AbstractModel<DthCommentModel> {
 	private Long idComment;
 	private Long idProduct;
 	private Long idUser;

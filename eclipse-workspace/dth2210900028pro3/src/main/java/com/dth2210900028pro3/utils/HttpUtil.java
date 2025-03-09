@@ -3,8 +3,6 @@ package com.dth2210900028pro3.utils;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class HttpUtil {

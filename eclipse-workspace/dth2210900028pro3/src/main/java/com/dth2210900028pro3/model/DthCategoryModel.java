@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class DthCategoryModel extends AbstractModel{
+public class DthCategoryModel extends AbstractModel<DthCategoryModel>{
 	private long idCategory;
 	private String nameCategory;
 	private String image;

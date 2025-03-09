@@ -1,6 +1,6 @@
 package com.dth2210900028pro3.model;
 
-public class DthOrderModel extends AbstractModel {
+public class DthOrderModel extends AbstractModel<DthOrderModel> {
 	private long idOrder;
 	private long idUser;
 	private String shippingAddress;

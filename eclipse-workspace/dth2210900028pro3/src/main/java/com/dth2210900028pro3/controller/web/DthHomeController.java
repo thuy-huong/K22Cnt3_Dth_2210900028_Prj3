@@ -10,13 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.dth2210900028pro3.model.DthUserModel;
 import com.dth2210900028pro3.service.ICategoryService;
 import com.dth2210900028pro3.service.IDthProductService;
+import com.dth2210900028pro3.service.IDthUserService;
+import com.dth2210900028pro3.utils.FormUtil;
+import com.dth2210900028pro3.utils.SessionUtil;
 
-@WebServlet(urlPatterns = {"/trang-chu"})
+@WebServlet(urlPatterns = { "/trang-chu", "/dang-nhap", "/dang-xuat" })
 public class DthHomeController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+
+	@Inject
+	private IDthUserService userService;
 	
 	@Inject
 	private ICategoryService cateService;
@@ -24,13 +31,42 @@ public class DthHomeController extends HttpServlet {
 	@Inject
 	private IDthProductService productService;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	
-        RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
-        rd.forward(request, response);
-    }
-    
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
-    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String action = request.getParameter("action");
+
+		if (action != null && action.equals("login")) {
+			RequestDispatcher rd = request.getRequestDispatcher("/views/login.jsp");
+			rd.forward(request, response);
+		} else if (action != null && action.equals("logout")) {
+			SessionUtil.getInstance().removeValue(request, "USERMODEL");
+			response.sendRedirect(request.getContextPath()+"/trang-chu");
+		} else {
+			RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
+			rd.forward(request, response);
+		}
+
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String action = request.getParameter("action");
+
+		if (action != null && action.equals("login")) {
+			DthUserModel model = FormUtil.toModel(DthUserModel.class, request);
+			model = userService.findByUserAndPassAndStatus(model.getUserName(), model.getPassword(), 1);
+			if(model != null) {
+				SessionUtil.getInstance().putValue(request, "USERMODEL", model);;
+				
+				if(model.getRole().getName().equals("User")) {
+					response.sendRedirect(request.getContextPath()+"/trang-chu");
+				} else if(model.getRole().getName().equals("Admin")) {
+					response.sendRedirect(request.getContextPath()+"/admin-home");
+				}
+			}else {
+				response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login");
+				
+			}
+		}
+	}
 }
