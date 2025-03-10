@@ -1,7 +1,7 @@
 package com.dth2210900028pro3.model;
 
 public class DthProductModel extends AbstractModel<DthProductModel> {
-	private long idProduct;
+	private Long idProduct;
 	private String nameProduct;
 	private int idCategory;
 	private int idBrand;
@@ -14,13 +14,30 @@ public class DthProductModel extends AbstractModel<DthProductModel> {
 	private String image;
 	private int status;
 	private Boolean isDelete;
-	
+	private DthCategoryModel category = new DthCategoryModel();
+	private DthBrandModel brand = new DthBrandModel();
 
-	public long getIdProduct() {
+	public DthBrandModel getBrand() {
+		return brand;
+	}
+
+	public void setBrand(DthBrandModel brand) {
+		this.brand = brand;
+	}
+
+	public DthCategoryModel getCategory() {
+		return category;
+	}
+
+	public void setCategory(DthCategoryModel category) {
+		this.category = category;
+	}
+
+	public Long getIdProduct() {
 		return idProduct;
 	}
 
-	public void setIdProduct(long idProduct) {
+	public void setIdProduct(Long idProduct) {
 		this.idProduct = idProduct;
 	}
 
@@ -119,6 +136,5 @@ public class DthProductModel extends AbstractModel<DthProductModel> {
 	public void setIsDelete(Boolean isDelete) {
 		this.isDelete = isDelete;
 	}
-
 
 }

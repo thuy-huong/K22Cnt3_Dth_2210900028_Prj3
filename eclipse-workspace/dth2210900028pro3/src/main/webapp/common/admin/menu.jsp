@@ -4,12 +4,12 @@
 <%@include file="/common/taglib.jsp"%>
 
 <!-- Sidebar -->
-<ul
-	class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion"
+<ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion"
 	id="accordionSidebar">
 
 	<!-- Sidebar - Brand -->
-	<a class="sidebar-brand d-flex align-items-center justify-content-center"
+	<a
+		class="sidebar-brand d-flex align-items-center justify-content-center"
 		href="<c:url value='/admin-home'/>">
 		<div class="sidebar-brand-icon rotate-n-15">
 			<i class="fas fa-laugh-wink"></i>
@@ -30,9 +30,15 @@
 
 	<!-- Heading -->
 	<div class="sidebar-heading">Quản lý của hàng</div>
+<c:url var="addNewURL" value="/admin-product">
+			<c:param name="type" value="edit"></c:param>
+			
+		</c:url>
 
+	<c:url var="listURL" value="/admin-product">
+		<c:param name="type" value="list"></c:param>
 
-
+	</c:url>
 	<!-- Nav Item - Products Collapse Menu -->
 	<li class="nav-item"><a class="nav-link collapsed" href="#"
 		data-toggle="collapse" data-target="#collapseProducts"
@@ -42,8 +48,11 @@
 		<div id="collapseProducts" class="collapse"
 			aria-labelledby="headingProducts" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item" href="<c:url value='/admin-product-list'/>">Danh sách sản phẩm</a>
-				<a class="collapse-item" href="cards.html">Thêm mới sản phẩm</a>
+				<a class="collapse-item"
+					href="${listURL }">Danh sách sản
+					phẩm</a> <a class="collapse-item"
+					href="${addNewURL }">Thêm mới sản
+					phẩm</a>
 			</div>
 		</div></li>
 
@@ -122,7 +131,7 @@
 		<button class="rounded-circle border-0" id="sidebarToggle"></button>
 	</div>
 
-	
+
 
 </ul>
 <!-- End of Sidebar -->

@@ -6,4 +6,6 @@ import com.dth2210900028pro3.model.DthCategoryModel;
 
 public interface ICategoryDAO extends GenericDAO<DthCategoryModel>{
 	List<DthCategoryModel> findAll();
+	DthCategoryModel findOne(long id);
+	
 }

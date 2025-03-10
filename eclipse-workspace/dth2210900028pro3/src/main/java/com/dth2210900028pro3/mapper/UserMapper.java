@@ -26,6 +26,7 @@ public class UserMapper implements RowMapper<DthUserModel> {
 			user.setModifieddate(resultSet.getTimestamp("modifieddate"));
 			user.setCreatedBy(resultSet.getString("createdby"));
 			user.setModifiedBy(resultSet.getString("modifiedby"));
+			
 			try {
 				DthRoleModel role = new DthRoleModel();
 				role.setName(resultSet.getString("name"));

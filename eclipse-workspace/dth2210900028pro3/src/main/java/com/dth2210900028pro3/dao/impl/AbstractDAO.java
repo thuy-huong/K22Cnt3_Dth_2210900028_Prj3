@@ -9,22 +9,26 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 import com.dth2210900028pro3.dao.GenericDAO;
 import com.dth2210900028pro3.mapper.RowMapper;
 
 public class AbstractDAO<T> implements GenericDAO<T> {
+	
+	  ResourceBundle resourceBundle = ResourceBundle.getBundle("db");
 
 	public Connection getConn() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/dth_2210900028_project3";
-			String user = "root";
-			String password = "Dth31082004@";
+//			
+			Class.forName(resourceBundle.getString("drivername"));
+			String url = resourceBundle.getString("url");
+			String user = resourceBundle.getString("user");
+			String password = resourceBundle.getString("password");
 			return DriverManager.getConnection(url, user, password);
 
 		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+			
 			return null;
 		}
 

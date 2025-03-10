@@ -10,7 +10,7 @@ public class DthOrderModel extends AbstractModel<DthOrderModel> {
 	private double totalPrice;
 	private String note;
 	private int status;
-
+	
 	public long getIdOrder() {
 		return idOrder;
 	}

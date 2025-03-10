@@ -4,13 +4,16 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import com.dth2210900028pro3.dao.ICategoryDAO;
 import com.dth2210900028pro3.dao.IDthProductDAO;
+import com.dth2210900028pro3.model.DthCategoryModel;
 import com.dth2210900028pro3.model.DthProductModel;
 import com.dth2210900028pro3.service.IDthProductService;
 
 public class DthProductService implements IDthProductService {
 	@Inject
 	private IDthProductDAO productDao;
+	
 
 	@Override
 	public List<DthProductModel> findByCategoryId(int idCategory) {
@@ -23,6 +26,7 @@ public class DthProductService implements IDthProductService {
 
 		return productDao.findOne(productId);
 	}
+	
 
 	@Override
 	public DthProductModel update(DthProductModel updateProduct) {
@@ -44,6 +48,12 @@ public class DthProductService implements IDthProductService {
 	public List<DthProductModel> findAll() {
 		
 		return productDao.findAll();
+	}
+
+	@Override
+	public DthProductModel findOne(long id) {
+		
+		return productDao.findOne(id);
 	}
 
 }

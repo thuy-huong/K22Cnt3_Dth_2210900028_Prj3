@@ -11,7 +11,35 @@ public class AbstractModel<T> {
 	private String modifiedBy;
 	private long[] ids;
 	private List<T> listResult = new ArrayList<>();
+	private String message;
+	private String alert;
+	private String type;
 	
+	
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getAlert() {
+		return alert;
+	}
+
+	public void setAlert(String alert) {
+		this.alert = alert;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	public List<T> getListResult() {
 		return listResult;
 	}

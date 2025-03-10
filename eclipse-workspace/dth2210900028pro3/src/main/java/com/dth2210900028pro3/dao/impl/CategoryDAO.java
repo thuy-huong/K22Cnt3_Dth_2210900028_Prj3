@@ -11,8 +11,15 @@ public class CategoryDAO extends AbstractDAO<DthCategoryModel> implements ICateg
 	
 	@Override
 	public List<DthCategoryModel> findAll() {
-		String sql = "select * from dthcategory";
+		String sql = "select * from dthcategory where status = 1";
 		return query(sql, new CategoryMapper());
 	}
 
+	@Override
+	public DthCategoryModel findOne(long id) {
+		String sql = "select * from dthcategory where idcategory=?";
+		List<DthCategoryModel> categories = query(sql, new CategoryMapper(), id);
+		return categories.isEmpty() ? null : categories.get(0);
+	}
+	
 }

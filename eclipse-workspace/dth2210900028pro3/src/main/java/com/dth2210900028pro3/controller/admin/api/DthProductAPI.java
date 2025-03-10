@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dth2210900028pro3.model.DthProductModel;
+import com.dth2210900028pro3.model.DthUserModel;
 import com.dth2210900028pro3.service.IDthProductService;
 import com.dth2210900028pro3.utils.HttpUtil;
+import com.dth2210900028pro3.utils.SessionUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @WebServlet(urlPatterns = {"/api-admin-product"})
@@ -30,6 +32,7 @@ public class DthProductAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF8");
 		response.setContentType("application/json");
 		DthProductModel productModel =  HttpUtil.of(request.getReader()).toModel(DthProductModel.class);
+		productModel.setCreatedBy(((DthUserModel) SessionUtil.getInstance().getValue(request, "USERMODEL")).getUserName());
 		productModel = productService.save(productModel);
 		mapper.writeValue(response.getOutputStream(), productModel);
 	}
@@ -39,6 +42,7 @@ public class DthProductAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF8");
 		response.setContentType("application/json");
 		DthProductModel updateProduct =  HttpUtil.of(request.getReader()).toModel(DthProductModel.class);
+		updateProduct.setModifiedBy(((DthUserModel) SessionUtil.getInstance().getValue(request, "USERMODEL")).getUserName());
 		updateProduct= productService.update(updateProduct);
 		mapper.writeValue(response.getOutputStream(), updateProduct);
 	}
@@ -48,6 +52,7 @@ public class DthProductAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF8");
 		response.setContentType("application/json");
 		DthProductModel productModel =  HttpUtil.of(request.getReader()).toModel(DthProductModel.class);
+		productModel.setModifiedBy(((DthUserModel) SessionUtil.getInstance().getValue(request, "USERMODEL")).getUserName());
 		productService.delete(productModel.getIds());
 		mapper.writeValue(response.getOutputStream(), "{}");
 	}

@@ -3,7 +3,10 @@ package com.dth2210900028pro3.mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.dth2210900028pro3.model.DthBrandModel;
+import com.dth2210900028pro3.model.DthCategoryModel;
 import com.dth2210900028pro3.model.DthProductModel;
+import com.dth2210900028pro3.model.DthRoleModel;
 
 public class ProductMapper implements RowMapper<DthProductModel> {
 
@@ -28,6 +31,22 @@ public class ProductMapper implements RowMapper<DthProductModel> {
 			product.setModifieddate(rs.getTimestamp("modifieddate"));
 			product.setCreatedBy(rs.getString("createdby"));
 			product.setModifiedBy(rs.getString("modifiedby"));
+			
+			try {
+				DthCategoryModel category = new DthCategoryModel();
+				category.setNameCategory(rs.getString("namecategory"));
+				product.setCategory(category);
+			}catch(Exception e) {
+				System.out.print(e.getMessage());
+			}
+			try {
+				DthBrandModel brand = new DthBrandModel();
+				brand.setNameBrand(rs.getString("namebrand"));
+				product.setBrand(brand);
+			}catch(Exception e) {
+				
+			}
+			
 			return product;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

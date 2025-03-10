@@ -41,7 +41,9 @@
 							<div id="lg1" class="tab-pane active">
 								<div class="login-form-container">
 									<div class="login-register-form">
-
+										<c:if test="${not empty message }" >
+											<div class="alert alert-${alert }" role="alert">${message}</div>
+										</c:if>
 										<form action="/dth2210900028pro3/dang-nhap" method="post"
 											id="formlogin">
 											<input type="text" name="userName" id="userName"
