@@ -2,35 +2,34 @@ package com.dth2210900028pro3.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class HttpUtil {
-	private String value;
+    private String value;
 
-	public HttpUtil(String value) {
-		this.value = value;
-	}
+    public HttpUtil(String value) {
+        this.value = value;
+    }
 
-	public <T> T toModel(Class<T> tClass) {
-		try {
-			return new ObjectMapper().readValue(value, tClass);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-		}
-		return null;
-	}
-	
-	public static HttpUtil of(BufferedReader reader) {
-		StringBuilder sb = new StringBuilder();
-		try {
-			String line;
-			while ((line = reader.readLine()) != null) {
-				sb.append(line);
-			}
-		} catch (IOException e) {
-			System.out.print(e.getMessage());
-		}
-		return new HttpUtil(sb.toString());
-	}
+    public <T> T toModel(Class<T> tClass) {
+        try {
+            return new ObjectMapper().readValue(value, tClass);
+        } catch (IOException e) {
+            System.err.println("Lỗi khi chuyển đổi JSON: " + e.getMessage());
+            return null;
+        }
+    }
+
+    public static HttpUtil of(BufferedReader reader) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
+            }
+        } catch (IOException e) {
+            System.err.println("Lỗi đọc dữ liệu: " + e.getMessage());
+        }
+        return new HttpUtil(sb.toString());
+    }
 }

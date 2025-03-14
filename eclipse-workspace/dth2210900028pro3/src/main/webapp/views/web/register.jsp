@@ -1,22 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Đăng nhập</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<!-- Breadcrumb Area start -->
+<!-- Breadcrumb Area start -->
 	<section class="breadcrumb-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="breadcrumb-content">
-						<h1 class="breadcrumb-hrading">Login Page</h1>
+						<h1 class="breadcrumb-hrading">Register Page</h1>
 						<ul class="breadcrumb-links">
-							<li><a href="/dth2210900028pro3/trang-chu">Home</a></li>
-							<li>Login </li>
+							<li><a href="${pageContext.request.contextPath}/trang-chu">Home</a></li>
+							<li>Register </li>
 						</ul>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 					<div class="login-register-wrapper">
 						<div class="login-register-tab-list nav">
 							<a class="active" data-bs-toggle="tab" href="#lg1">
-								<h4>login</h4>
+								<h4>Register</h4>
 							</a> 
 						</div>
 						<div class="tab-content">
@@ -42,18 +42,35 @@
 										<c:if test="${not empty message }" >
 											<div class="alert alert-${alert }" role="alert">${message}</div>
 										</c:if>
-										<form action="/dth2210900028pro3/dang-nhap" method="post"
+										<form action="/dth2210900028pro3/dang-ky" method="post"
 											id="formlogin">
+											
+											<label for="username">Tên đầy đủ:</label>
+											<input type="text" name="fullName" id="fullName"
+												placeholder="Tên người dùng" required /> 
+										 	
+										 	<label for="username">Tài khoản:</label>
 											<input type="text" name="userName" id="userName"
-												placeholder="Tên đăng nhập" required /> <input
+												placeholder="Tên đăng nhập" required /> 
+											
+											<label for="username">Mật khẩu:</label>
+											<input
 												type="password" id="password" name="password"
 												placeholder="Mật khẩu" required />
-
+											
+											<label for="username">Địa chỉ:</label>
+											<input type="text" name="address" id="address"
+												placeholder="Địa chỉ" required /> 
+												
+											<label for="username">Số điện thoại:</label>
+											<input type="text" name="phone" id="phone"
+												placeholder="Số điện thoại" required /> 
+											
 											<div class="button-box text-center">
-												<input type="hidden" value="login" id="action" name="action" />
+												
 												<button type="submit"
 													style="width: 50%; background-color: #2cde97;">
-													<span>Login</span>
+													<span>Register</span>
 												</button>
 											</div>
 										</form>

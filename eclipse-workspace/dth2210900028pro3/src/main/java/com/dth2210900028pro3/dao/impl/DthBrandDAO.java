@@ -10,7 +10,7 @@ public class DthBrandDAO extends AbstractDAO<DthBrandModel> implements IDthBrand
 
 	@Override
 	public List<DthBrandModel> findAll() {
-		String sql = "select * from dthbrand where status = 1";
+		String sql = "select * from dthbrand";
 		return query(sql, new BrandMapper());
 	}
 

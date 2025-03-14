@@ -49,7 +49,7 @@
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item"
 											href='<c:url value="/dang-nhap?action=login"/>'>Đăng nhập</a></li>
-										<li><a class="dropdown-item" href="#">Đăng ký</a></li>
+										<li><a class="dropdown-item" href="${pageContext.request.contextPath}/dang-ky">Đăng ký</a></li>
 									</ul>
 								</c:if>
 							</div>

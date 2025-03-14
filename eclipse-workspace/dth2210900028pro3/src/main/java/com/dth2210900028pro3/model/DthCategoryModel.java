@@ -46,4 +46,5 @@ public class DthCategoryModel extends AbstractModel<DthCategoryModel>{
 	public void setIsDelete(Boolean isDelete) {
 		this.isDelete = isDelete;
 	}
+	
 }

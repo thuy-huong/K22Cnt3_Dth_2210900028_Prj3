@@ -62,7 +62,7 @@ public class DthProductDAO extends AbstractDAO<DthProductModel> implements IDthP
 	@Override
 	public List<DthProductModel> findAll() {
 		
-		String sql = "select * from dthproduct ";
+		String sql = "SELECT * FROM dthproduct AS p INNER JOIN dthcategory AS c ON p.idcategory = c.idcategory INNER JOIN dthbrand AS b ON p.idbrand = b.idbrand ";
 		return query(sql, new ProductMapper());
 	}
 

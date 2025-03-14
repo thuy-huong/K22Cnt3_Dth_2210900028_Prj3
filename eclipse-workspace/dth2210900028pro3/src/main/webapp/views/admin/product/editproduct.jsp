@@ -1,16 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
+<c:url var="APIurl" value="/api-admin-product"/>
+<c:url var="listURL" value="/admin-product">
+		<c:param name="type" value="list"></c:param>
+
+	</c:url>
 
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Cập nhật sản phẩm</title>
-    <link rel="stylesheet" href="path/to/bootstrap.css"> <!-- Thêm liên kết đến Bootstrap nếu cần -->
+    <title>${not empty model.idProduct ? 'Cập nhật sản phẩm' : 'Thêm mới sản phẩm'}</title>
+    <link rel="stylesheet" href="path/to/bootstrap.css"> 
 </head>
 <body>
-    <!-- New Product Add Start -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -18,11 +21,8 @@
                     <div class="col-sm-8 m-auto">
                         <div class="card">
                             <div class="card-body">
-                                <h3 class="text-center" style="font-weight: 600; color: black;">
-                                    Thông tin sản phẩm
-                                </h3>
-
-                                <form class="row g-3">
+                                <h3 class="text-center" style="font-weight: 600; color: black;">Thông tin sản phẩm</h3>
+                                <form class="row g-3" id="formSubmit" enctype="multipart/form-data">
                                     <div class="col-12">
                                         <label for="nameProduct" class="form-label">Tên Sản phẩm</label>
                                         <input type="text" class="form-control" id="nameProduct" name="nameProduct" value="${model.nameProduct}">
@@ -32,8 +32,7 @@
                                         <select id="idCategory" name="idCategory" class="form-control">
                                             <option value="" disabled>Chọn danh mục...</option>
                                             <c:forEach var="item" items="${categories}">
-                                                <option value="${item.idCategory}" 
-                                                        <c:if test="${model.idCategory == item.idCategory}">selected</c:if>>
+                                                <option value="${item.idCategory}" ${model.idCategory == item.idCategory ? 'selected' : ''}>
                                                     ${item.nameCategory}
                                                 </option>
                                             </c:forEach>
@@ -44,8 +43,7 @@
                                         <select id="idBrand" name="idBrand" class="form-control">
                                             <option value="" disabled>Chọn thương hiệu...</option>
                                             <c:forEach var="item" items="${brands}">
-                                                <option value="${item.idBrand}" 
-                                                        <c:if test="${model.idBrand == item.idBrand}">selected</c:if>>
+                                                <option value="${item.idBrand}" ${model.idBrand == item.idBrand ? 'selected' : ''}>
                                                     ${item.nameBrand}
                                                 </option>
                                             </c:forEach>
@@ -67,9 +65,16 @@
                                         <label for="unit" class="form-label">Đơn vị tính</label>
                                         <input type="text" class="form-control" id="unit" name="unit" value="${model.unit}">
                                     </div>
+                                    <div class="col-md-6 my-3">
+                                        <label for="status" class="form-label">Trạng thái</label>
+                                        <select id="status" name="status" class="form-control">
+                                            <option value="1" ${model.status == 1 ? 'selected' : ''}>Hiển thị</option>
+                                            <option value="0" ${model.status == 0 ? 'selected' : ''}>Ẩn</option>
+                                        </select>
+                                    </div>
                                     <div class="col-12 my-3">
-                                        <label for="image" class="form-label">Hình ảnh sản phẩm</label>
-                                        <input type="file" class="form-control" id="image" name="image">
+                                        <label for="uploadimage" class="form-label">Hình ảnh sản phẩm</label>
+                                        <input type="file" class="form-control" id="uploadimage" name="uploadimage">
                                     </div>
                                     <div class="col-12 my-3">
                                         <label for="shortDescription" class="form-label">Mô tả ngắn sản phẩm</label>
@@ -80,7 +85,9 @@
                                         <textarea class="form-control" id="detailedDescription" rows="10" name="detailedDescription">${model.detailedDescription}</textarea>
                                     </div>
                                     <div class="col-12 my-3 text-center">
-                                        <button type="submit" class="btn btn-primary" style="width: 40%;">Cập nhật</button>
+                                        <input type="hidden" name="idProduct" id="idProduct" value="${model.idProduct}"/>
+                                        <input type="button" class="btn btn-primary" style="width: 40%;" id="btnAddOrUpdateProduct"
+                                               value="${not empty model.idProduct ? 'Cập nhật sản phẩm' : 'Thêm mới sản phẩm'}" />
                                     </div>
                                 </form>
                             </div>
@@ -90,6 +97,61 @@
             </div>
         </div>
     </div>
-    <!-- New Product Add End -->
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("btnAddOrUpdateProduct").addEventListener("click", function(e) {
+                e.preventDefault();
+                const formData = new FormData(document.getElementById("formSubmit"));
+
+                var id = document.getElementById("idProduct").value;
+                if (id === "") {
+                    addNew(formData);
+                } else {
+                    update(formData);
+                }
+            });
+        });
+
+        function addNew(formData) {
+            fetch('${APIurl}', {
+                method: 'POST',
+                body: formData // Gửi trực tiếp formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Có lỗi xảy ra khi thêm mới sản phẩm');
+            })
+            .then(data => {
+                alert("Sản phẩm đã được thêm thành công!");
+                window.location.href = '${listURL}'; // Chuyển hướng đến danh sách sản phẩm
+            })
+            .catch(error => {
+                alert("Đã xảy ra lỗi: " + error.message);
+            });
+        }
+
+        function update(formData) {
+            fetch('${APIurl}', {
+                method: 'PUT',
+                body: formData // Gửi trực tiếp formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Có lỗi xảy ra khi cập nhật sản phẩm');
+            })
+            .then(data => {
+                alert("Sản phẩm đã được cập nhật thành công!");
+                window.location.href = '${listURL}'; // Chuyển hướng đến danh sách sản phẩm
+            })
+            .catch(error => {
+                alert("Đã xảy ra lỗi: " + error.message);
+            });
+        }
+    </script>
 </body>
 </html>

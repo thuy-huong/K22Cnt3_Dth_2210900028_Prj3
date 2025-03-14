@@ -4,4 +4,5 @@ encoding//src/main/resources/message.properties=UTF-8
 encoding//src/main/webapp/WEB-INF/web.xml=UTF-8
 encoding//src/main/webapp/common/web/footer.jsp=UTF-8
 encoding//src/main/webapp/common/web/header.jsp=UTF-8
+encoding//src/main/webapp/decorators/admin.jsp=UTF-8
 encoding/src=UTF-8
