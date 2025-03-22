@@ -73,7 +73,7 @@
                                             <c:param name="type" value="edit"></c:param>
                                             <c:param name="idProduct" value="${item.idProduct}"></c:param>
                                         </c:url>
-                                        <a href="#" class="text-info"><i class="fas fa-fw fa-regular fa-eye"></i></a> |
+                                      
                                         <a href="${editURL}" class="text-success"><i class="fas fa-fw fa-light fa-pen"></i></a> |
                                         <a href="#" class="text-danger"><i class="fas fa-fw fa-regular fa-trash"></i></a>
                                     </td>

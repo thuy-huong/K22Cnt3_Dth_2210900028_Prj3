@@ -12,4 +12,8 @@ public interface IDthProductDAO  extends GenericDAO<DthProductModel>{
 	void delete(long id);
 	
 	List<DthProductModel> findAll();
+	
+	List<DthProductModel> findByBrandId(int idBrand );
+	
+	List<DthProductModel> finByNameAndIdCategory(String keywoed, int idCategory );
 }

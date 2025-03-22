@@ -36,6 +36,12 @@ public class DthUserService implements IDthUserService{
 		return userDao.findByUserName(userName);
 	}
 
+	@Override
+	public DthUserModel findByid(Long id) {
+		
+		return userDao.findById(id);
+	}
+
 	
 
 }

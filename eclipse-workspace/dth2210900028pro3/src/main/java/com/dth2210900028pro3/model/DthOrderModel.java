@@ -1,5 +1,8 @@
 package com.dth2210900028pro3.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DthOrderModel extends AbstractModel<DthOrderModel> {
 	private long idOrder;
 	private long idUser;
@@ -10,7 +13,26 @@ public class DthOrderModel extends AbstractModel<DthOrderModel> {
 	private double totalPrice;
 	private String note;
 	private int status;
-	
+	private DthUserModel user;
+
+	public DthUserModel getUser() {
+		return user;
+	}
+
+	public void setUser(DthUserModel user) {
+		this.user = user;
+	}
+
+	private List<DthOrderDetailModel> orderDetails = new ArrayList<DthOrderDetailModel>();
+
+	public List<DthOrderDetailModel> getOrderDetails() {
+		return orderDetails;
+	}
+
+	public void setOrderDetails(List<DthOrderDetailModel> orderDetails) {
+		this.orderDetails = orderDetails;
+	}
+
 	public long getIdOrder() {
 		return idOrder;
 	}

@@ -106,7 +106,7 @@
 		<script src="teamplate/admin/js/sb-admin-2.min.js"></script>
 
 		<!-- Page level plugins -->
-		<script src="teamplate/admin/vendor/chart.js/Chart.min.js"></script>
+		<script src="vendor/chart.js/Chart.min.js"></script>
 		<script
 			src="teamplate/admin/vendor/datatables/jquery.dataTables.min.js"></script>
 		<script

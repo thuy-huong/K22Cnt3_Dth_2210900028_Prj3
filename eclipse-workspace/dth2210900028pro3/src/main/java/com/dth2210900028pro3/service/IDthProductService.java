@@ -11,4 +11,6 @@ public interface IDthProductService {
 	DthProductModel update(DthProductModel updateProduct);
 	void delete(long[] ids);
 	List<DthProductModel> findAll();
+	List<DthProductModel> findByBrandId(int idBrand);
+	List<DthProductModel> finByNameAndIdCategory(String keywoed, int idCategory );
 }

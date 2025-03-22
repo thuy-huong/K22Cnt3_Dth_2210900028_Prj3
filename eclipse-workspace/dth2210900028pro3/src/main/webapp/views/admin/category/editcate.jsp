@@ -3,14 +3,13 @@
 <c:url var="APIurl" value="/api-admin-product"/>
 <c:url var="listURL" value="/admin-product">
 		<c:param name="type" value="list"></c:param>
-
-	</c:url>
+</c:url>
 
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>${not empty model.idProduct ? 'Cập nhật sản phẩm' : 'Thêm mới sản phẩm'}</title>
+    <title>${not empty model.idCategory ? 'Cập nhật danh mục' : 'Thêm mới danh mục'}</title>
     <link rel="stylesheet" href="path/to/bootstrap.css"> 
 </head>
 <body>
@@ -24,31 +23,10 @@
                                 <h3 class="text-center" style="font-weight: 600; color: black;">Thông tin sản phẩm</h3>
                                 <form class="row g-3" id="formSubmit" enctype="multipart/form-data">
                                     <div class="col-12">
-                                        <label for="nameProduct" class="form-label">Tên Sản phẩm</label>
+                                        <label for="nameProduct" class="form-label">Tên danh mục</label>
                                         <input type="text" class="form-control" id="nameProduct" name="nameProduct" value="${model.nameProduct}">
                                     </div>
-                                    <div class="col-md-6 my-3">
-                                        <label for="idCategory" class="form-label">Danh mục</label>
-                                        <select id="idCategory" name="idCategory" class="form-control">
-                                            <option value="" disabled>Chọn danh mục...</option>
-                                            <c:forEach var="item" items="${categories}">
-                                                <option value="${item.idCategory}" ${model.idCategory == item.idCategory ? 'selected' : ''}>
-                                                    ${item.nameCategory}
-                                                </option>
-                                            </c:forEach>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 my-3">
-                                        <label for="idBrand" class="form-label">Thương hiệu</label>
-                                        <select id="idBrand" name="idBrand" class="form-control">
-                                            <option value="" disabled>Chọn thương hiệu...</option>
-                                            <c:forEach var="item" items="${brands}">
-                                                <option value="${item.idBrand}" ${model.idBrand == item.idBrand ? 'selected' : ''}>
-                                                    ${item.nameBrand}
-                                                </option>
-                                            </c:forEach>
-                                        </select>
-                                    </div>
+                                    
                                     <div class="col-md-6 my-3">
                                         <label for="importPrice" class="form-label">Đơn giá nhập</label>
                                         <input type="number" class="form-control" id="importPrice" name="importPrice" value="${model.importPrice}">
@@ -68,8 +46,8 @@
                                     <div class="col-md-6 my-3">
                                         <label for="status" class="form-label">Trạng thái</label>
                                         <select id="status" name="status" class="form-control">
-                                            <option value="1" ${model.status == 1 ? 'selected' : ''}>Hiển thị</option>
-                                            <option value="0" ${model.status == 0 ? 'selected' : ''}>Ẩn</option>
+                                            <option value="1" ${model.status == true ? 'selected' : ''}>Hiển thị</option>
+                                            <option value="0" ${model.status == false ? 'selected' : ''}>Ẩn</option>
                                         </select>
                                     </div>
                                     <div class="col-12 my-3">

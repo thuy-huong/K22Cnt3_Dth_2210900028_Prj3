@@ -10,7 +10,7 @@ public class DthProductDAO extends AbstractDAO<DthProductModel> implements IDthP
 
 	@Override
 	public List<DthProductModel> findByCategoryId(int idCategory) {
-		String sql = "select * from dthproduct where idcategory=?";
+		String sql = "select * from dthproduct where idcategory=? and isdelete != true";
 		return query(sql, new ProductMapper(), idCategory);
 	}
 
@@ -64,6 +64,25 @@ public class DthProductDAO extends AbstractDAO<DthProductModel> implements IDthP
 		
 		String sql = "SELECT * FROM dthproduct AS p INNER JOIN dthcategory AS c ON p.idcategory = c.idcategory INNER JOIN dthbrand AS b ON p.idbrand = b.idbrand ";
 		return query(sql, new ProductMapper());
+	}
+
+	@Override
+	public List<DthProductModel> findByBrandId(int idBrand) {
+		String sql = "select * from dthproduct where idbrand=? and isdelete != true and status = 1";
+		return query(sql, new ProductMapper(), idBrand);
+	}
+
+	@Override
+	public List<DthProductModel> finByNameAndIdCategory(String keyword, int idCategory) {
+		String sql;
+		if(idCategory == 0) {
+			sql = "SELECT * FROM dthproduct WHERE nameproduct LIKE ?";
+			return query(sql, new ProductMapper(), "%"+keyword+"%");
+		}else {
+			sql = "select * from dthproduct where nameproduct = ? and idcategory = ?";
+			return query(sql, new ProductMapper(), "%"+keyword+"%", idCategory);
+		}
+		
 	}
 
 }

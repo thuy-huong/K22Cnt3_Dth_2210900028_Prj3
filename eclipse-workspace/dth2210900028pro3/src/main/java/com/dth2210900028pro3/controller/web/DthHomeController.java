@@ -72,7 +72,7 @@ public class DthHomeController extends HttpServlet {
 			model = userService.findByUserAndPassAndStatus(model.getUserName(), model.getPassword(), 1);
 			if (model != null) {
 				SessionUtil.getInstance().putValue(request, "USERMODEL", model);
-				;
+				
 
 				if (model.getRole().getName().equals("User")) {
 					response.sendRedirect(request.getContextPath() + "/trang-chu");

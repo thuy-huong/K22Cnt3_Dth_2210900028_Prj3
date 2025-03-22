@@ -42,6 +42,13 @@ public class DthUserDAO extends AbstractDAO<DthUserModel> implements IDthUserDAO
 		return users.isEmpty() ? null : users.get(0);
 	}
 
+	@Override
+	public DthUserModel findById(Long id) {
+		 String sql = "SELECT * FROM dthuser WHERE iduser = ?";
+		 List<DthUserModel> users = query(sql, new UserMapper(), id);
+		return users.isEmpty() ? null : users.get(0);
+	}
+
 	
 
 }

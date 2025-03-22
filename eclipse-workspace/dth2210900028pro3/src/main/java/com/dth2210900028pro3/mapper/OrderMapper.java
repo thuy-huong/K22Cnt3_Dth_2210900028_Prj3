@@ -3,6 +3,8 @@ package com.dth2210900028pro3.mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.dth2210900028pro3.model.DthCategoryModel;
+import com.dth2210900028pro3.model.DthOrderDetailModel;
 import com.dth2210900028pro3.model.DthOrderModel;
 
 public class OrderMapper implements RowMapper<DthOrderModel>{
@@ -24,6 +26,7 @@ public class OrderMapper implements RowMapper<DthOrderModel>{
 	            order.setModifieddate(resultSet.getTimestamp("modifieddate")); 
 	            order.setCreatedBy(resultSet.getString("createdby")); 
 	            order.setModifiedBy(resultSet.getString("modifiedby")); 
+	          
 	            return order;
 	        } catch (SQLException e) {
 	           

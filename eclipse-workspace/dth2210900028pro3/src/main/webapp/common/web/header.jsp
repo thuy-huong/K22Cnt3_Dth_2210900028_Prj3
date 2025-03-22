@@ -33,8 +33,8 @@
 										${USERMODEL.fullName } <i class="ion-ios-arrow-down"></i>
 									</button>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="#">My account</a></li>
-										<li><a class="dropdown-item" href="#">Thanh toán</a></li>
+										<li><a class="dropdown-item" href="${pageContext.request.contextPath}/don-hang">Đơn hàng</a></li>
+										
 										<li><a class="dropdown-item"
 											href='<c:url value="/dang-xuat?action=logout"/>'>Đăng xuất</a></li>
 
@@ -53,7 +53,7 @@
 									</ul>
 								</c:if>
 							</div>
-
+							
 							<!-- Single Wedge Start -->
 							<div class="header-top-curr dropdown">
 								<button
@@ -83,7 +83,7 @@
 				<!-- Logo Start -->
 				<div class="col-md-2 col-sm-2">
 					<div class="logo">
-						<a href="/dth2210900028pro3/trang-chu"><img
+						<a href="${pageContext.request.contextPath}/trang-chu"><img
 							src="teamplate/web/images/logo/logo.png" alt="" /></a>
 					</div>
 				</div>
@@ -94,108 +94,37 @@
 					<div class="main-navigation">
 						<ul>
 							<li class="menu-dropdown"><a
-								href="/dth2210900028pro3/trang-chu">Home </a></li>
-							<li class="menu-dropdown"><a href="#">Shop <i
-									class="ion-ios-arrow-down"></i></a>
-								<ul class="mega-menu-wrap">
-									<li>
-										<ul>
-											<li class="mega-menu-title"><a href="#">Shop Grid</a></li>
-											<li><a href="shop-3-column.html">Shop Grid 3 Column</a></li>
-											<li><a href="shop-4-column.html">Shop Grid 4 Column</a></li>
-											<li><a href="shop-left-sidebar.html">Shop Grid Left
-													Sidebar</a></li>
-											<li><a href="shop-right-sidebar.html">Shop Grid
-													Right Sidebar</a></li>
-										</ul>
-									</li>
-									<li>
-										<ul>
-											<li class="mega-menu-title"><a href="#">Shop List</a></li>
-											<li><a href="shop-list.html">Shop List</a></li>
-											<li><a href="shop-list-left-sidebar.html">Shop List
-													Left Sidebar</a></li>
-
-											<li><a href="shop-list-right-sidebar.html">Shop List
-													Right Sidebar</a></li>
-											<li><a href="shop-filter.html">Shop Filter Page</a></li>
-										</ul>
-									</li>
-									<li>
-										<ul>
-											<li class="mega-menu-title"><a href="#">Shop Single</a></li>
-											<li><a href="single-product.html">Shop Single</a></li>
-											<li><a href="single-product-variable.html">Shop
-													Variable</a></li>
-											<li><a href="single-product-affiliate.html">Shop
-													Affiliate</a></li>
-											<li><a href="single-product-group.html">Shop Group</a></li>
-											<li><a href="single-product-tabstyle-2.html">Shop
-													Tab 2</a></li>
-											<li><a href="single-product-tabstyle-3.html">Shop
-													Tab 3</a></li>
-										</ul>
-									</li>
-									<li>
-										<ul>
-											<li class="mega-menu-title"><a href="#">Shop Single</a></li>
-											<li><a href="single-product-slider.html">Shop Slider</a></li>
-											<li><a href="single-product-gallery-left.html">Shop
-													Gallery Left</a></li>
-											<li><a href="single-product-gallery-right.html">Shop
-													Gallery Right</a></li>
-											<li><a href="single-product-sticky-left.html">Shop
-													Sticky Left</a></li>
-											<li><a href="single-product-sticky-right.html">Shop
-													Sticky Right</a></li>
-										</ul>
-									</li>
-									<li class="banner-wrapper"><a href="single-product.html"><img
-											src="assets/images/banner-image/banner-menu.jpg" alt="" /></a></li>
-								</ul></li>
-							<li class="menu-dropdown"><a href="#">Pages <i
+								href="${pageContext.request.contextPath}/trang-chu">Home </a></li>
+							<li class="menu-dropdown"><a href="${pageContext.request.contextPath}/san-pham">Shop </a></li>
+							
+							<li class="menu-dropdown"><a href="#">Category <i
 									class="ion-ios-arrow-down"></i></a>
 								<ul class="sub-menu">
-									<li><a href="about.html">About Page</a></li>
-									<li><a href="cart.html">Cart Page</a></li>
-									<li><a href="checkout.html">Checkout Page</a></li>
-									<li><a href="compare.html">Compare Page</a></li>
-									<li><a href="login.html">Login & Regiter Page</a></li>
-									<li><a href="my-account.html">Account Page</a></li>
-									<li><a href="wishlist.html">Wishlist Page</a></li>
-								</ul></li>
-							<li class="menu-dropdown"><a href="#">Blog <i
+									  <c:forEach var="item" items="${categories}">
+									    
+										  <c:url var="productCateURL" value="/san-pham">
+											<c:param name="idCategory" value="${item.idCategory }"></c:param>
+												
+											</c:url>
+										<li><a href="${productCateURL }">${item.nameCategory }</a></li>
+									</c:forEach>
+								</ul>
+							</li>	
+							<li class="menu-dropdown"><a href="#">Brand <i
 									class="ion-ios-arrow-down"></i></a>
 								<ul class="sub-menu">
-									<li class="menu-dropdown position-static"><a href="#">Blog
-											Grid <i class="ion-ios-arrow-down"></i>
-									</a>
-										<ul class="sub-menu sub-menu-2">
-											<li><a href="blog-grid-left-sidebar.html">Blog Grid
-													Left Sidebar</a></li>
-											<li><a href="blog-grid-right-sidebar.html">Blog Grid
-													Right Sidebar</a></li>
-										</ul></li>
-									<li class="menu-dropdown position-static"><a href="#">Blog
-											List <i class="ion-ios-arrow-down"></i>
-									</a>
-										<ul class="sub-menu sub-menu-2">
-											<li><a href="blog-list-left-sidebar.html">Blog List
-													Left Sidebar</a></li>
-											<li><a href="blog-list-right-sidebar.html">Blog List
-													Right Sidebar</a></li>
-										</ul></li>
-									<li class="menu-dropdown position-static"><a href="#">Blog
-											Single <i class="ion-ios-arrow-down"></i>
-									</a>
-										<ul class="sub-menu sub-menu-2">
-											<li><a href="blog-single-left-sidebar.html">Blog
-													Single Left Sidebar</a></li>
-											<li><a href="blog-single-right-sidebar.html">Blog
-													Single Right Sidebar</a></li>
-										</ul></li>
-								</ul></li>
-							<li><a href="contact.html">Contact Us</a></li>
+									  <c:forEach var="item" items="${brands}">
+									   <c:url var="productBrandURL" value="/san-pham">
+											<c:param name="idBrand" value="${item.idBrand }"></c:param>
+												
+											</c:url>
+										<li><a href="${productBrandURL }">${item.nameBrand }</a></li>
+									</c:forEach>
+								</ul>
+							</li>
+							
+									
+							<li><a href="#">Contact Us</a></li>
 						</ul>
 					</div>
 					<!--Main Navigation End -->
@@ -205,43 +134,15 @@
 						<div class="header_account_list search_list">
 							<a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
 							<div class="dropdown_search">
-								<form action="#">
-									<input placeholder="Search entire store here ..." type="text" />
+								<form action="${pageContext.request.contextPath}/san-pham" method="GET">
+								
+									<input placeholder="Search entire store here ..." type="text" name="keyword" />
 									<div class="search-category">
-										<select class="bootstrap-select" name="poscats">
+										<select class="bootstrap-select" name="idCategory">
 											<option value="0">All categories</option>
-											<option value="104">Fresh Food</option>
-											<option value="183">- - Fresh Fruit</option>
-											<option value="187">- - - - Bananas</option>
-											<option value="188">- - - - Apples &amp; Pears</option>
-											<option value="189">- - - - Berries &amp; Cherries</option>
-											<option value="190">- - - - Oranges &amp; Citrus
-												Fruit</option>
-											<option value="191">- - - - Grapes</option>
-											<option value="184">- - Fresh Vegetables</option>
-											<option value="192">- - - - Potatoes &amp; Sweet
-												Potatoes</option>
-											<option value="193">- - - - Onions &amp; Leeks</option>
-											<option value="194">- - - - Carrots &amp; Root
-												Vegetables</option>
-											<option value="195">- - - - Broccoli &amp;
-												Cauliflower</option>
-											<option value="196">- - - - Cabbages &amp; Greens</option>
-											<option value="185">- - Fresh Salad &amp; Dips</option>
-											<option value="197">- - - - Lettuce &amp; Salad bags
-											</option>
-											<option value="198">- - - - Tomatoes</option>
-											<option value="199">- - - - Cucumber</option>
-											<option value="200">- - - - Celery</option>
-											<option value="201">- - - - Peppers</option>
-											<option value="186">- - Milk, Butter &amp; Eggs</option>
-											<option value="202">- - - - Milk</option>
-											<option value="203">- - - - Spreads &amp; Margarine
-											</option>
-											<option value="204">- - - - Fresh Cream &amp;
-												Custard</option>
-											<option value="205">- - - - Eggs</option>
-											<option value="206">- - - - Baking &amp; Cooking</option>
+											<c:forEach var="itemCate" items="${categories}">
+												<option  value="${itemCate.idCategory }">${itemCate.nameCategory }</option>
+											</c:forEach>
 										</select>
 									</div>
 									<button type="submit">
@@ -255,17 +156,22 @@
 						<div class="contact-link">
 							<div class="phone">
 								<p>Call us:</p>
-								<a href="tel:(+800)345678">(+800)345678</a>
+								<a href="tel:0962169464">0962169464</a>
 							</div>
 						</div>
 						<!--Contact info End -->
 						<!--Cart info Start -->
 						<div class="cart-info d-flex">
 							<div class="mini-cart-warp">
+								<c:set var="totalAmount" value="0" /> <!-- Khởi tạo biến tổng -->
+					        <c:forEach var="item" items="${cartItems.listResult}">
+					         
+					            <c:set var="totalAmount" value="${totalAmount + (item.quantity * item.product.sellingPrice)}" /> <!-- Cập nhật tổng -->
+					        </c:forEach>
 								<a href="#offcanvas-cart"
 									class="count-cart offcanvas-toggle color-black"> <span
-									class="amount-tag">$20.00</span> <span
-									class="item-quantity-tag">02</span>
+									class="amount-tag">$${totalAmount}</span> <span
+									class="item-quantity-tag">${empty CART.items ?0:CART.totalQuantity}</span>
 								</a>
 
 							</div>
@@ -309,9 +215,10 @@
 							</ul>
 						</div>
 						<div class="mini-cart-warp">
+						 
 							<a href="#offcanvas-cart"
 								class="count-cart offcanvas-toggle color-black"> <span
-								class="amount-tag">$20.00</span> <span class="item-quantity-tag">02</span>
+								class="amount-tag">$${totalAmount}</span> <span class="item-quantity-tag">${empty CART.items ?0:CART.totalQuantity}</span>
 							</a>
 						</div>
 					</div>
@@ -333,33 +240,9 @@
 					<div class="search-category">
 						<select class="bootstrap-select" name="poscats">
 							<option value="0">All categories</option>
-							<option value="104">Fresh Food</option>
-							<option value="183">- - Fresh Fruit</option>
-							<option value="187">- - - - Bananas</option>
-							<option value="188">- - - - Apples &amp; Pears</option>
-							<option value="189">- - - - Berries &amp; Cherries</option>
-							<option value="190">- - - - Oranges &amp; Citrus Fruit</option>
-							<option value="191">- - - - Grapes</option>
-							<option value="184">- - Fresh Vegetables</option>
-							<option value="192">- - - - Potatoes &amp; Sweet
-								Potatoes</option>
-							<option value="193">- - - - Onions &amp; Leeks</option>
-							<option value="194">- - - - Carrots &amp; Root
-								Vegetables</option>
-							<option value="195">- - - - Broccoli &amp; Cauliflower</option>
-							<option value="196">- - - - Cabbages &amp; Greens</option>
-							<option value="185">- - Fresh Salad &amp; Dips</option>
-							<option value="197">- - - - Lettuce &amp; Salad bags</option>
-							<option value="198">- - - - Tomatoes</option>
-							<option value="199">- - - - Cucumber</option>
-							<option value="200">- - - - Celery</option>
-							<option value="201">- - - - Peppers</option>
-							<option value="186">- - Milk, Butter &amp; Eggs</option>
-							<option value="202">- - - - Milk</option>
-							<option value="203">- - - - Spreads &amp; Margarine</option>
-							<option value="204">- - - - Fresh Cream &amp; Custard</option>
-							<option value="205">- - - - Eggs</option>
-							<option value="206">- - - - Baking &amp; Cooking</option>
+							<c:forEach var="itemCate" items="${categories}">
+								<option  value="${itemCate.idCategory }">${itemCate.nameCategory }</option>
+							</c:forEach>
 						</select>
 					</div>
 					<button type="submit">
@@ -382,52 +265,55 @@
 			<button class="offcanvas-close">×</button>
 		</div>
 		<div class="body customScroll">
-			<ul class="minicart-product-list">
-				<li><a href="single-product.html" class="image"><img
-						src="assets/images/product-image/mini-cart/1.jpg"
-						alt="Cart product Image"></a>
-					<div class="content">
-						<a href="single-product.html" class="title">Juicy Couture...</a> <span
-							class="quantity-price">1 x <span class="amount">$18.86</span></span>
-						<a href="#" class="remove">×</a>
-					</div></li>
-				<li><a href="single-product.html" class="image"><img
-						src="assets/images/product-image/mini-cart/2.jpg"
-						alt="Cart product Image"></a>
-					<div class="content">
-						<a href="single-product.html" class="title">Water and Wind...</a>
-						<span class="quantity-price">1 x <span class="amount">$43.28</span></span>
-						<a href="#" class="remove">×</a>
-					</div></li>
-				<li><a href="single-product.html" class="image"><img
-						src="assets/images/product-image/mini-cart/3.jpg"
-						alt="Cart product Image"></a>
-					<div class="content">
-						<a href="single-product.html" class="title">Fila Locker
-							Room...</a> <span class="quantity-price">1 x <span
-							class="amount">$37.34</span></span> <a href="#" class="remove">×</a>
-					</div></li>
-			</ul>
-		</div>
-		<div class="shopping-cart-total">
-			<h4>
-				Subtotal : <span>$20.00</span>
-			</h4>
-			<h4>
-				Shipping : <span>$7.00</span>
-			</h4>
-			<h4>
-				Taxes : <span>$0.00</span>
-			</h4>
-			<h4 class="shop-total">
-				Total : <span>$27.00</span>
-			</h4>
-		</div>
+    <ul class="minicart-product-list">
+        <c:set var="totalAmount" value="0" /> <!-- Khởi tạo biến tổng -->
+        <c:forEach var="item" items="${cartItems.listResult}">
+         <c:url var="productDetailURL" value="/san-pham">
+			<c:param name="idProduct" value="${item.product.idProduct}"></c:param>
+			</c:url>
+            <li>
+                <a href="${productDetailURL }" class="image">
+                    <img src="${item.product.image}" alt="Cart product Image">
+                </a>
+                <div class="content">
+                    <a href="${productDetailURL }" class="title">${item.product.nameProduct}</a> 
+                    <span class="quantity-price">${item.quantity} x <span class="amount">$${item.product.sellingPrice}</span></span>
+                    
+                </div>
+            </li>
+            <c:set var="totalAmount" value="${totalAmount + (item.quantity * item.product.sellingPrice)}" /> <!-- Cập nhật tổng -->
+        </c:forEach>
+    </ul>
+</div>
+<div class="shopping-cart-total">
+    <h4>
+        Subtotal : <span>$${totalAmount}</span> <!-- Hiển thị tổng tiền -->
+    </h4>
+    <h4>
+        Shipping : <span>$0.00</span>
+    </h4>
+    <h4>
+        Taxes : <span>$0.00</span>
+    </h4>
+    <h4 class="shop-total">
+        Total : <span>$${totalAmount}</span> <!-- Hiển thị tổng số tiền -->
+    </h4>
+</div>
 		<div class="foot">
 			<div class="buttons">
-				<a href="cart.html" class="btn btn-dark btn-hover-primary mb-30px">view
-					cart</a> <a href="checkout.html"
-					class="btn btn-outline-dark current-btn">checkout</a>
+				<a href="${pageContext.request.contextPath}/cart" class="btn btn-dark btn-hover-primary mb-30px">view
+					cart</a> 
+					
+                        <c:if test="${not empty USERMODEL && not empty cartItems.listResult}">
+                        	 <a href="${pageContext.request.contextPath}/thanh-toan" class="btn btn-outline-dark current-btn">checkout</a>
+                        </c:if>
+                   		<c:if test="${empty  cartItems.listResult}">
+                        	 <a href="${pageContext.request.contextPath}/san-pham" class="btn btn-outline-dark current-btn">Thanh toán</a>
+                        </c:if>
+                      	<c:if test="${ empty USERMODEL  }">
+                      		<a href="${pageContext.request.contextPath}/dang-nhap?action=login&message=not_login&alert=danger" class="btn btn-outline-dark current-btn">Thanh toán</a>
+                      	</c:if>
+				
 			</div>
 		</div>
 	</div>
@@ -441,21 +327,50 @@
 		class="contact-info d-flex align-items-center justify-content-center color-black py-3">
 		<img class="me-3" src="assets/images/icons/mobile-contact.png" alt="">
 		<p>Call us:</p>
-		<a class="color-black" href="tel:(+800)345678">(+800)345678</a>
+		<a class="color-black" href="tel:0962169464">0962169464</a>
 	</div>
 	<!-- offcanvas compare & wishlist -->
 	<div class="user-panel">
 		<ul class="d-flex justify-content-between">
-			<li class="m-0"><a href="compare.html"><i
-					class="ion-ios-shuffle-strong"></i>Compare (0)</a></li>
-			<li><a href="wishlist.html"><i
+			
+			<li><a href="#"><i
 					class="ion-android-favorite-outline"></i>Wishlist (0)</a></li>
 		</ul>
 	</div>
 	<!-- offcanvas currency -->
 	<div class="offcanvas-userpanel">
 		<ul>
-			<li class="offcanvas-userpanel__role"><a href="#">USD $ <i
+			<c:if test="${not empty USERMODEL }">
+				<li class="offcanvas-userpanel__role"><a href="#">${USERMODEL.fullName }<i
+						class="ion-ios-arrow-down"></i></a>
+					<ul class="user-sub-menu">
+						<li><a class="current" href="#">My account</a></li>
+						<li><a href="#">Thanh toán</a></li>
+						<li><a href="<c:url value="/dang-xuat?action=logout"/>">Đăng xuất</a></li>
+						
+					</ul>
+				</li>
+			</c:if>
+			
+			<c:if test="${empty USERMODEL }">
+				<li class="offcanvas-userpanel__role"><a href="#">Account<i
+						class="ion-ios-arrow-down"></i></a>
+					<ul class="user-sub-menu">
+						<li><a class="current" href="'<c:url value="/dang-nhap?action=login"/>'">Đăng nhập</a></li>
+						<li><a href="${pageContext.request.contextPath}/dang-ky">Đăng ký</a></li>
+						
+					</ul>
+				</li>				
+			</c:if>
+		</ul>
+	</div>
+	
+									
+							
+	<!-- offcanvas currency -->
+	<div class="offcanvas-userpanel">
+		<ul>
+			<li class="offcanvas-userpanel__role"><a href="#">VNĐ<i
 					class="ion-ios-arrow-down"></i></a>
 				<ul class="user-sub-menu">
 					<li><a class="current" href="#">USD $</a></li>
@@ -463,20 +378,7 @@
 				</ul></li>
 		</ul>
 	</div>
-	<!-- offcanvas language -->
-	<div class="offcanvas-userpanel">
-		<ul>
-			<li class="offcanvas-userpanel__role"><a href="#"><img
-					src="assets/images/icons/1.jpg" alt="">English <i
-					class="ion-ios-arrow-down"></i></a>
-				<ul class="user-sub-menu">
-					<li><a class="current" href="#"><img
-							src="assets/images/icons/1.jpg" alt="">English</a></li>
-					<li><a href="#"><img src="assets/images/icons/2.jpg"
-							alt=""> Français</a></li>
-				</ul></li>
-		</ul>
-	</div>
+
 	<div class="menu-close">menu</div>
 	<!-- offcanvas menu -->
 	<div class="inner customScroll">
@@ -485,113 +387,25 @@
 				<li><a href="#"><span class="menu-text">Home</span></a>
 					<ul class="sub-menu">
 						<li><a href="#"><span class="menu-text">Home
-									Organic</span></a>
-							<ul class="sub-menu">
-								<li><a href="index.html">Organic 1</a></li>
-								<li><a href="index-2.html">Organic 2</a></li>
-								<li><a href="index-3.html">Organic 3</a></li>
-								<li><a href="index-4.html">Organic 4</a></li>
-							</ul></li>
-						<li><a href="#"><span class="menu-text">Home
-									Cosmetic</span></a>
-							<ul class="sub-menu">
-								<li><a href="index-5.html">Cosmetic 1</a></li>
-								<li><a href="index-6.html">Cosmetic 2</a></li>
-								<li><a href="index-7.html">Cosmetic 3</a></li>
-								<li><a href="index-8.html">Cosmetic 4</a></li>
-							</ul></li>
-						<li><a href="#"><span class="menu-text">Home
-									Digital</span></a>
-							<ul class="sub-menu">
-								<li><a href="index-9.html">Digital 1</a></li>
-								<li><a href="index-10.html">Digital 2</a></li>
-								<li><a href="index-11.html">Digital 3</a></li>
-								<li><a href="index-12.html">Digital 4</a></li>
-							</ul></li>
-						<li><a href="#"><span class="menu-text">Home
-									Furniture</span></a>
-							<ul class="sub-menu">
-								<li><a href="index-13.html">Furniture 1</a></li>
-								<li><a href="index-14.html">Furniture 2</a></li>
-								<li><a href="index-15.html">Furniture 3</a></li>
-								<li><a href="index-16.html">Furniture 4</a></li>
-							</ul></li>
-						<li><a href="#"><span class="menu-text">Home
-									Medical</span></a>
-							<ul class="sub-menu">
-								<li><a href="index-17.html">Medical 1</a></li>
-								<li><a href="index-18.html">Medical 2</a></li>
-								<li><a href="index-19.html">Medical 3</a></li>
-								<li><a href="index-20.html">Medical 4</a></li>
-							</ul></li>
-						<li class="menu-dropdown position-relative"><a
-							href="index-21.html">Single Product</a> <span class="stekar">new</span>
-						</li>
-					</ul></li>
-				<li class="menu-dropdown"><a href="#">Pages</a>
+									</span></a>
+							</li>
+				<li class="menu-dropdown"><a href="${pageContext.request.contextPath}/san-pham">Shop</a></li>
+				<li><a href="#"><span class="menu-text">Category</span></a>
 					<ul class="sub-menu">
-						<li><a href="about.html">About Page</a></li>
-						<li><a href="cart.html">Cart Page</a></li>
-						<li><a href="checkout.html">Checkout Page</a></li>
-						<li><a href="compare.html">Compare Page</a></li>
-						<li><a href="login.html">Login & Regiter Page</a></li>
-						<li><a href="my-account.html">Account Page</a></li>
-						<li><a href="wishlist.html">Wishlist Page</a></li>
-					</ul></li>
-				<li><a href="#"><span class="menu-text">Shop</span></a>
+						<c:forEach var="itemCate" items="${categories}">
+							<li><a href="${itemCate.idCategory }"><span class="menu-text">${itemCate.nameCategory }</span></a></li>
+						</c:forEach>
+						
+						
+					</ul>
+				</li>
+				<li><a href="#"><span class="menu-text">Brand</span></a>
 					<ul class="sub-menu">
-						<li><a href="#"><span class="menu-text">Shop Page</span></a>
-							<ul class="sub-menu">
-								<li><a href="shop-3-column.html">Shop Grid 3 Column</a></li>
-								<li><a href="shop-4-column.html">Shop Grid 4 Column</a></li>
-								<li><a href="shop-left-sidebar.html">Shop Grid Left
-										Sidebar</a></li>
-								<li><a href="shop-right-sidebar.html">Shop Grid Right
-										Sidebar</a></li>
-								<li><a href="shop-list.html">Shop List</a></li>
-								<li><a href="shop-list-left-sidebar.html">Shop List
-										Left Sidebar</a></li>
-								<li><a href="shop-list-right-sidebar.html">Shop List
-										Right Sidebar</a></li>
-								<li><a href="shop-filter.html">Shop Filter Page</a></li>
-							</ul></li>
-						<li><a href="#"><span class="menu-text">product
-									Details Page</span></a>
-							<ul class="sub-menu">
-								<li><a href="single-product.html">Shop Single</a></li>
-								<li><a href="single-product-variable.html">Shop
-										Variable</a></li>
-								<li><a href="single-product-affiliate.html">Shop
-										Affiliate</a></li>
-								<li><a href="single-product-group.html">Shop Group</a></li>
-								<li><a href="single-product-tabstyle-2.html">Shop Tab 2</a></li>
-								<li><a href="single-product-tabstyle-3.html">Shop Tab 3</a></li>
-								<li><a href="single-product-slider.html">Shop Slider</a></li>
-								<li><a href="single-product-gallery-left.html">Shop
-										Gallery Left</a></li>
-								<li><a href="single-product-gallery-right.html">Shop
-										Gallery Right</a></li>
-								<li><a href="single-product-sticky-left.html">Shop
-										Sticky Left</a></li>
-								<li><a href="single-product-sticky-right.html">Shop
-										Sticky Right</a></li>
-							</ul></li>
-					</ul></li>
-				<li><a href="#"><span class="menu-text">Blog</span></a>
-					<ul class="sub-menu">
-						<li><a href="blog-grid-left-sidebar.html">Grid Left
-								Sidebar</a></li>
-						<li><a href="blog-grid-right-sidebar.html">Grid Right
-								Sidebar</a></li>
-						<li><a href="blog-list-left-sidebar.html">List Left
-								Sidebar</a></li>
-						<li><a href="blog-list-right-sidebar.html">List Right
-								Sidebar</a></li>
-						<li><a href="blog-single-left-sidebar.html">Single Left
-								Sidebar</a></li>
-						<li><a href="blog-single-right-sidebar.html">Single Right
-								Sidbar</a>
-					</ul></li>
+						<c:forEach var="item" items="${brands }">
+							<li><a href="">${item.nameBrand }</a></li>
+						</c:forEach>
+					</ul>
+				</li>
 				<li><a href="contact.html">Contact Us</a></li>
 			</ul>
 		</div>

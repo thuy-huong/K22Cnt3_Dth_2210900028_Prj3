@@ -155,25 +155,23 @@
                     <!-- Single Item -->
                     <article class="list-product">
                         <div class="img-block">
-                            <a href="single-product.html" class="thumbnail">
+                          <c:url var="productDetailURL" value="/san-pham">
+								<c:param name="idProduct" value="${item.idProduct }"></c:param>
+							</c:url>
+                            <a href="${productDetailURL }" class="thumbnail">
                                 <img class="first-img" src="${item.image} " style="max-width: 200px; height: 200px;"
                                     alt="" />
                                 <img class="second-img" src="${item.image}" style="max-width: 200px; height: 200px;"
                                     alt="" />
                             </a>
-                            <div class="quick-view">
-                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <i class="ion-ios-search-strong"></i>
-                                </a>
-                            </div>
+                         
                         </div>
                         <ul class="product-flag">
                             <li class="new">New</li>
                         </ul>
                         <div class="product-decs">
                           
-                            <h2><a href="#" class="product-link">${item.nameProduct}</a></h2>
+                            <h2><a href="${productDetailURL }" class="product-link">${item.nameProduct}</a></h2>
                             <div class="rating-product">
                                 <i class="ion-android-star"></i>
                                 <i class="ion-android-star"></i>
@@ -221,7 +219,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="banner-inner">
-                            <a href="shop-4-column.html"><img src="assets/images/banner-image/4.jpg" alt="" /></a>
+                            <a href="#"><img src="assets/images/banner-image/4.jpg" alt="" /></a>
                         </div>
                     </div>
                 </div>

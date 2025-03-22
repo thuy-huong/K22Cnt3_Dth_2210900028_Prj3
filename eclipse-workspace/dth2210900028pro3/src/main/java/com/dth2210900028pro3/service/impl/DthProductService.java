@@ -56,4 +56,16 @@ public class DthProductService implements IDthProductService {
 		return productDao.findOne(id);
 	}
 
+	@Override
+	public List<DthProductModel> findByBrandId(int idBrand) {
+		return productDao.findByCategoryId(idBrand);
+		
+	}
+
+	@Override
+	public List<DthProductModel> finByNameAndIdCategory(String keywoed, int idCategory) {
+		
+		return productDao.finByNameAndIdCategory(keywoed, idCategory);
+	}
+
 }
